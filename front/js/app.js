@@ -88,7 +88,7 @@ const label = (group, id) =>
   "Не указано";
 const color = (id) => {
   const c = meta?.risk_levels?.find((r) => r.id === id)?.color;
-  return /^#[\da-f]{3,8}$/i.test(c || "") ? c : "#65736b";
+  return /^#[\da-f]{3,8}$/i.test(c || "") ? c : "#64748b";
 };
 const badge = (id) =>
   id
@@ -180,8 +180,8 @@ function navigation() {
   const route = location.hash.split("/")[1] || "overview";
   const name = settings().display_name || settings().user;
   return `<aside class="sidebar" id="sidebar" aria-label="Основная навигация">
-  <a href="#/overview" class="brand" aria-label="Дрон-мониторинг — главная"><img class="brand-logo" src="assets/sber-logo.svg" alt="СБЕР"></a>
-  <p class="product-name">Дрон-мониторинг ИЖС</p><nav class="nav">${[
+  <a href="#/overview" class="brand" aria-label="Дрон-мониторинг — главная"><img class="brand-logo" src="assets/favicon.svg" alt="" aria-hidden="true"><span class="brand-name">Дрон-мониторинг</span></a>
+  <p class="product-name">Контроль строительства ИЖС</p><nav class="nav">${[
     ["overview", "overview", "Обзор мониторинга"],
     ["objects", "house", "Объекты"],
     ["tasks", "tasks", "Задачи"],
@@ -361,13 +361,13 @@ function strategyBlock(o) {
     );
   const source =
     c.decision_source === "gigachat"
-      ? "GigaChat · рекомендация проверена"
+      ? "AI · рекомендация проверена"
       : c.llm_status === "pending"
-        ? "Готовится рекомендация GigaChat"
+        ? "Готовится AI-рекомендация"
         : "Правила банка · резервное решение";
   const next = c.next_step,
     stepMeta = meta.steps.find((x) => x.id === next?.code);
-  return `<section class="panel" id="strategy"><div class="panel-head"><h2>Стратегия и следующий шаг</h2>${icon("bolt")}</div><div class="panel-body"><div class="ai-label">${c.llm_status === "pending" ? '<span class="spinner"></span>' : icon("shield")}${source}</div><h3 class="strategy-title">${s ? `${esc(s.code)} · ${esc(s.label)}` : next ? esc(next.label) : "Ожидание следующего события"}</h3>${s ? `<span class="badge">${esc(strategyStates[s.state] || s.state)}</span>` : ""}<p class="strategy-copy" style="margin-top:12px">${esc(c.recommendation?.reason || c.explanation || "Объяснение не предоставлено.")}</p>${c.llm_status === "pending" ? '<p class="subtle" style="margin-top:10px">Резерв по правилам уже доступен. Риск рассчитан независимо от GigaChat.</p>' : ""}${c.recommendation?.missing_data?.length ? `<div class="note warning" style="margin-top:15px">${icon("info")}<div>Не хватает данных: ${esc(c.recommendation.missing_data.join(", "))}</div></div>` : ""}
+  return `<section class="panel" id="strategy"><div class="panel-head"><h2>Стратегия и следующий шаг</h2>${icon("bolt")}</div><div class="panel-body"><div class="ai-label">${c.llm_status === "pending" ? '<span class="spinner"></span>' : icon("shield")}${source}</div><h3 class="strategy-title">${s ? `${esc(s.code)} · ${esc(s.label)}` : next ? esc(next.label) : "Ожидание следующего события"}</h3>${s ? `<span class="badge">${esc(strategyStates[s.state] || s.state)}</span>` : ""}<p class="strategy-copy" style="margin-top:12px">${esc(c.recommendation?.reason || c.explanation || "Объяснение не предоставлено.")}</p>${c.llm_status === "pending" ? '<p class="subtle" style="margin-top:10px">Резерв по правилам уже доступен. Риск рассчитан по правилам сервиса.</p>' : ""}${c.recommendation?.missing_data?.length ? `<div class="note warning" style="margin-top:15px">${icon("info")}<div>Не хватает данных: ${esc(c.recommendation.missing_data.join(", "))}</div></div>` : ""}
   ${s?.state === "proposed" ? `<form id="strategy-form" class="strategy-next"><label for="strategy-comment">Решение сотрудника</label><textarea id="strategy-comment" name="comment" placeholder="Комментарий к решению"></textarea><div class="action-buttons"><button class="btn primary" type="submit" name="decision" value="confirm">${icon("check")}Подтвердить</button><button class="btn" type="submit" name="decision" value="reject">Отклонить</button></div><p class="subtle" style="margin-top:10px">Проверка ответа AI не заменяет ваше подтверждение.</p></form>` : next && stepMeta?.outcomes?.length ? `<form id="step-form" class="strategy-next" data-step="${esc(next.code)}"><label>Следующий шаг: ${esc(next.label)}</label><div class="step-options">${stepMeta.outcomes.map((x) => `<label><input type="radio" name="outcome" value="${esc(x.id)}" required>${esc(x.label)}</label>`).join("")}</div><label for="step-comment">Комментарий</label><textarea id="step-comment" name="comment" placeholder="Что выяснили и на чём основано решение"></textarea><button class="btn primary" type="submit">Сохранить исход ${icon("arrow")}</button></form>` : next ? `<div class="strategy-next"><p class="subtle">${stepMeta?.kind === "auto" ? "Автоматический шаг" : "Следующий шаг"}: ${esc(next.label)}</p></div>` : ""}
   <details><summary>Путь решения и доказательства</summary><ol class="decision-path">${(c.path || []).map((x) => `<li><strong>${esc(label("steps", x.node))} · ${esc({ yes: "Да", no: "Нет", expired: "Срок истёк" }[x.answer] || x.answer)}</strong>${esc(x.evidence)}</li>`).join("")}</ol></details></div></section>`;
 }
@@ -798,7 +798,7 @@ function showPhoto(id) {
       const classColor = meta.classes.find((c) => c.id === d.class)?.color;
       const c = /^#[\da-f]{3,8}$/i.test(classColor || "")
         ? classColor
-        : "#087f43";
+        : "#2563eb";
       return `<div class="bbox" style="left:${x1 * 100}%;top:${y1 * 100}%;width:${(x2 - x1) * 100}%;height:${(y2 - y1) * 100}%;--bbox-color:${c}"><span>${esc(d.label || label("classes", d.class))} ${Math.round(d.conf * 100)}%</span></div>`;
     })
     .join("");

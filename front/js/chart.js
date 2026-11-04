@@ -38,9 +38,9 @@ export function progressChart(history, escape) {
     ...fact.map((f) => ({ date: f.flown_at, pct: f.readiness_pct })),
   ];
   if (fact.length)
-    svg += `<path d="${path(facts)}" fill="none" stroke="#087f43" stroke-width="2.5"/>`;
+    svg += `<path d="${path(facts)}" fill="none" stroke="#2563eb" stroke-width="2.5"/>`;
   for (const f of fact)
-    svg += `<circle cx="${x(f.flown_at)}" cy="${y(f.readiness_pct)}" r="4.5" fill="#087f43" stroke="white" stroke-width="2"><title>${escape(f.flown_at.slice(0, 10))}: ${f.readiness_pct}%${f.reviewed ? " · исправлено сотрудником" : ""}</title></circle><text class="chart-label" x="${Math.min(w - 55, x(f.flown_at) + 10)}" y="${y(f.readiness_pct) + 4}">${f.readiness_pct}%</text>`;
+    svg += `<circle cx="${x(f.flown_at)}" cy="${y(f.readiness_pct)}" r="4.5" fill="#2563eb" stroke="white" stroke-width="2"><title>${escape(f.flown_at.slice(0, 10))}: ${f.readiness_pct}%${f.reviewed ? " · исправлено сотрудником" : ""}</title></circle><text class="chart-label" x="${Math.min(w - 55, x(f.flown_at) + 10)}" y="${y(f.readiness_pct) + 4}">${f.readiness_pct}%</text>`;
   if (history.forecast?.completion_at && fact.length) {
     const last = fact.at(-1);
     svg += `<path d="${path([

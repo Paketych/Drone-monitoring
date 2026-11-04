@@ -1,35 +1,23 @@
-@font-face {
-  font-family: "SB Sans";
-  src: url("../assets/fonts/SBSansText-Regular.woff2") format("woff2");
-  font-weight: 400;
-  font-display: swap;
-}
-@font-face {
-  font-family: "SB Sans";
-  src: url("../assets/fonts/SBSansText-Semibold.woff2") format("woff2");
-  font-weight: 600 800;
-  font-display: swap;
-}
 :root {
-  --brand: #087f43;
-  --brand-hover: #056b37;
-  --brand-soft: #eaf5ee;
-  --ink: #202925;
-  --muted: #65736b;
-  --line: #e4eae5;
-  --ground: #f5f7f5;
+  --brand: #2563eb;
+  --brand-hover: #1d4ed8;
+  --brand-soft: #eff6ff;
+  --ink: #1e293b;
+  --muted: #64748b;
+  --line: #e2e8f0;
+  --ground: #f5f7fb;
   --surface: #fff;
   --radius: 14px;
   --shadow: 0 16px 60px #00000021;
   --danger: #bd3239;
-  --focus: #066fba;
-  font-family: "SB Sans", "Segoe UI", sans-serif;
+  --focus: #2563eb;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   color: var(--ink);
   background: var(--ground);
   font-size: 14px;
   line-height: 1.5;
   font-synthesis: none;
-  scrollbar-color: #aabbb0 var(--ground);
+  scrollbar-color: #a8b4c6 var(--ground);
   caret-color: var(--brand);
   font-variant-numeric: tabular-nums;
 }
@@ -83,11 +71,11 @@ summary:focus-visible {
   outline-offset: 3px;
 }
 ::selection {
-  background: #c5ead2;
-  color: #154a2b;
+  background: #dbeafe;
+  color: #1e3a8a;
 }
 ::placeholder {
-  color: #738078;
+  color: #64748b;
 }
 h1,
 h2,
@@ -156,10 +144,17 @@ small {
 }
 .brand-logo {
   display: block;
-  width: 122px;
-  height: 33px;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
   object-fit: contain;
   object-position: left center;
+}
+.brand-name {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
 }
 .product-name {
   margin: 32px 12px 18px;
@@ -180,7 +175,7 @@ small {
   gap: 12px;
   padding: 12px 14px;
   border-radius: 9px;
-  color: #58675e;
+  color: #526176;
   font-size: 13px;
   font-weight: 600;
   min-height: 46px;
@@ -198,8 +193,8 @@ small {
   min-height: 20px;
   display: grid;
   place-items: center;
-  background: #dbeee1;
-  color: #176637;
+  background: #dbeafe;
+  color: #1e40af;
   border-radius: 5px;
   font-size: 11px;
 }
@@ -218,7 +213,7 @@ small {
   align-items: center;
   gap: 7px;
   font-weight: 400;
-  color: #53675a;
+  color: #526176;
   margin-bottom: 5px;
 }
 .dot {
@@ -368,7 +363,7 @@ small {
     color 0.15s;
 }
 .btn:hover {
-  background: #f0f4f1;
+  background: #f1f5f9;
 }
 .btn.primary {
   background: var(--brand);
@@ -383,7 +378,7 @@ small {
   border-color: transparent;
 }
 .btn.ghost:hover {
-  background: #edf2ee;
+  background: #eef2f6;
 }
 .btn.danger {
   color: var(--danger);
@@ -724,8 +719,8 @@ small {
 }
 .note {
   padding: 17px 20px;
-  background: #eaf3ed;
-  color: #3c6650;
+  background: #eff6ff;
+  color: #334e75;
   border-radius: 12px;
   font-size: 12px;
   line-height: 1.65;
@@ -745,8 +740,8 @@ small {
   color: #825613;
 }
 .note.neutral {
-  background: #f0f4f1;
-  color: #53685b;
+  background: #f1f5f9;
+  color: #526176;
 }
 .page-footer {
   display: flex;
@@ -837,7 +832,7 @@ tbody tr:hover {
 .field,
 select,
 textarea {
-  border: 1px solid #dce4de;
+  border: 1px solid #cbd5e1;
   border-radius: 8px;
   background: #fff;
   padding: 10px 12px;
@@ -938,8 +933,8 @@ textarea {
   gap: 12px;
   margin-bottom: 24px;
   padding: 18px 21px;
-  background: color-mix(in srgb, var(--risk-color, #087f43) 6%, white);
-  border: 1px solid color-mix(in srgb, var(--risk-color, #087f43) 18%, white);
+  background: color-mix(in srgb, var(--risk-color, #2563eb) 6%, white);
+  border: 1px solid color-mix(in srgb, var(--risk-color, #2563eb) 18%, white);
   border-radius: 12px;
   font-size: 13px;
   line-height: 1.7;
@@ -1000,7 +995,7 @@ textarea {
 .chart text {
   font-family: inherit;
   font-size: 10px;
-  fill: #738078;
+  fill: #64748b;
 }
 .chart .axis-label {
   font-size: 9px;
