@@ -54,8 +54,11 @@ def calculate_valuation(
     parameters = ValuationInputs.model_validate(inputs or {})
     project = obj.get("project") or {}
     fixed = obj.get("material") or {}
-    material = fixed.get("observed")
-    material_source = "fixed" if material in MATERIALS else None
+    material = parameters.wall_material
+    material_source = "manual" if material is not None else None
+    if material_source is None:
+        material = fixed.get("observed")
+        material_source = "fixed" if material in MATERIALS else None
     if material_source is None:
         material = project.get("wall_material")
         material_source = "project" if material in MATERIALS else None
@@ -94,6 +97,10 @@ def calculate_valuation(
         warnings.insert(0, "Используются демонстрационные тарифы, не рыночные данные.")
     if material_source == "project":
         warnings.append("Материал взят из проекта и пока не подтверждён как фактический.")
+    if material_source == "manual":
+        warnings.append(
+            "Материал выбран сотрудником для расчёта стоимости. Фактический материал стен этим не подтверждается."
+        )
     if area_source == "project_footprint_times_floors":
         warnings.append(
             "Площадь рассчитана как пятно застройки × этажность; это условная площадь по внешнему контуру."
@@ -128,6 +135,21 @@ def calculate_valuation(
             value = completed + (land or 0)
             value_range = [amount + (land or 0) for amount in completed_range]
             status = "estimated"
+    flight = obj.get("last_flight") or {}
+    if percent is not None:
+        readiness_status = "confirmed"
+    elif not flight:
+        readiness_status = "no_flight"
+    elif flight.get("status") in {"queued", "processing"}:
+        readiness_status = "processing"
+    elif flight.get("status") == "failed":
+        readiness_status = "failed"
+    elif (flight.get("result") or {}).get("status") == "model_unavailable":
+        readiness_status = "model_unavailable"
+    elif flight.get("target_confirmed") is not True:
+        readiness_status = "target_not_confirmed"
+    else:
+        readiness_status = "needs_review"
     breakdown = {
         "area_m2": float(area) if area is not None else None,
         "area_source": area_source,
@@ -140,6 +162,7 @@ def calculate_valuation(
         "rate_note": parameters.rate_note if rate_source == "manual" else config.rate_label,
         "readiness_pct": float(percent) if percent is not None else None,
         "readiness_source": readiness_source,
+        "readiness_status": readiness_status,
         "flight_id": flight_id,
         "land_rub": land,
         "land_source": "manual" if land is not None else None,
@@ -181,6 +204,7 @@ def calculate_valuation(
         "value_includes_land": land is not None,
         "range_percent": config.range_percent,
         "round_to_rub": config.round_to_rub,
+        "material_rates": {key: float(rate) for key, rate in config.rates_rub_m2.items()},
         "breakdown": breakdown,
         "missing_data": missing,
         "warnings": warnings,

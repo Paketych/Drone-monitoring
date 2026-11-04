@@ -1,4 +1,6 @@
 // Изолированный демонстрационный адаптер. Не является банковским движком риска.
+import { calculateDemoValuation } from "./valuation-demo.js";
+
 export const DEMO_DATE = "2026-10-31";
 const pairs = (rows) =>
   rows.map(([id, label, ...rest]) => ({ id, label, ...(rest[0] || {}) }));
@@ -364,26 +366,8 @@ function fixture(n) {
               "Демонстрационная схема, не геопривязка реального снимка.",
           }
         : null,
-    valuation: hasFlight
-      ? {
-          value_rub: 4300000,
-          range_rub: [3700000, 4900000],
-          breakdown: {
-            footprint_m2: 96,
-            footprint_source: "demo",
-            floors: 2,
-            floors_source: "demo",
-            material: "aerated_concrete",
-            unit_cost_rub_m2: 38000,
-            readiness_pct: 50,
-            land_rub: 650000,
-          },
-          warnings: [
-            "Демонстрационные величины. Удельные стоимости — заглушки, не методика банка.",
-          ],
-          explanation: "Демо: 96 м² × 2 × 38 000 ₽/м² × 50% + 650 000 ₽",
-        }
-      : null,
+    valuation_inputs: hasFlight ? { area_m2: 192, land_rub: 650000 } : {},
+    valuation: null,
   };
   const day = 86400000,
     anchor = Date.parse(DEMO_DATE),
@@ -594,6 +578,20 @@ const list = (items, p) => {
     page_size: size,
   };
 };
+function refreshDemoValuation(o) {
+  if (!Object.hasOwn(o, "valuation_inputs")) {
+    const old = o.valuation?.breakdown;
+    o.valuation_inputs =
+      old?.footprint_m2 && old?.floors
+        ? {
+            area_m2: old.footprint_m2 * old.floors,
+            land_rub: old.land_rub ?? null,
+          }
+        : {};
+  }
+  o.valuation = calculateDemoValuation(o);
+}
+
 export async function mockRequest(path, { method = "GET", body, user } = {}) {
   const u = new URL(path, "http://demo"),
     p = u.searchParams;
@@ -671,6 +669,7 @@ export async function mockRequest(path, { method = "GET", body, user } = {}) {
   }
   if (entity === "objects" && id && id !== "import") {
     const o = find(id);
+    refreshDemoValuation(o);
     if (!part) return structuredClone({ ...o, strategy: o.conductor.strategy });
     if (part === "history")
       return {
@@ -744,26 +743,11 @@ export async function mockRequest(path, { method = "GET", body, user } = {}) {
     }
     if (part === "valuation") {
       if (method === "POST") {
-        const land = Number(
-          body.land_rub ?? o.valuation?.breakdown.land_rub ?? 0,
-        );
-        const value = (96 * 2 * 38000 * o.readiness_pct) / 100 + land;
-        o.valuation = {
-          value_rub: Math.round(value),
-          range_rub: [Math.round(value * 0.85), Math.round(value * 1.15)],
-          breakdown: {
-            footprint_m2: 96,
-            floors: 2,
-            unit_cost_rub_m2: 38000,
-            readiness_pct: o.readiness_pct,
-            land_rub: land,
-          },
-          warnings: [
-            "Демонстрационный расчёт. Площадь, этажность и удельная стоимость — заглушки.",
-          ],
-          explanation: `96 м² × 2 × 38 000 ₽/м² × ${o.readiness_pct}% + ${land} ₽`,
-        };
-        log(o, "Пересчитана демонстрационная оценка", "", user);
+        const parameters = { ...o.valuation_inputs, ...body };
+        const result = calculateDemoValuation(o, parameters);
+        o.valuation_inputs = parameters;
+        o.valuation = result;
+        log(o, "Пересчитана стоимость постройки", "", user);
       }
       return structuredClone(o.valuation);
     }

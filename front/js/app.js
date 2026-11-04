@@ -438,8 +438,7 @@ function landDetail(o) {
   return `<section class="panel section-block"><div class="panel-head"><h2>Освоение участка</h2></div><div class="panel-body">${l ? `${meta.mock && l.status === "ok" ? `<figure class="land-figure" style="margin:0 0 20px"><svg viewBox="0 0 400 230" role="img" aria-label="Демонстрационная схема участка с домом и отступом 1,8 метра"><path d="M40 25H360V205H40Z" fill="#e2efe2" stroke="#739a7c" stroke-width="1.5" stroke-dasharray="6 4"/><path d="M185 75H330V160H185Z" fill="#bad4c0" stroke="#648e70" stroke-width="1.5"/><path d="M330 110H360M330 103v14m30-14v14" stroke="#b25b1f" stroke-width="1.5"/><text x="258" y="120" text-anchor="middle" fill="#365d40" font-size="14">Дом</text><text x="346" y="95" text-anchor="middle" fill="#9b4a16" font-size="12">1,8 м</text><text x="80" y="190" fill="#53775b" font-size="12">Участок</text></svg><figcaption class="subtle">Схема демо-объекта. Не фотография и не результат геопривязки.</figcaption></figure>` : ""}<dl class="facts"><dt>Состояние проверки</dt><dd>${esc({ ok: "Результат получен", unverified: "Не подтверждено", no_parcel: "Нет границ участка" }[l.status] || l.status)}</dd><dt>Дом внутри участка</dt><dd>${l.building?.inside_parcel == null ? "Не определено" : l.building.inside_parcel ? "Да" : "Нет"}</dd><dt>Ближайшая граница</dt><dd>${l.building?.min_setback_m != null ? `${l.building.min_setback_m} м` : "Не определено"}</dd><dt>ВРИ</dt><dd>${esc(l.vri?.label || "Не указан")}</dd><dt>Забор / хозпостройки / дорожки</dt><dd>${l.improvements ? [l.improvements.fence, l.improvements.outbuilding, l.improvements.paving].map((v) => (v == null ? "Неизвестно" : v ? "Есть" : "Нет")).join(" / ") : "Нет данных"}</dd></dl><p class="strategy-copy" style="margin-top:16px">${esc(l.explanation)}</p>${(l.signals || []).map((s) => `<div class="note warning" style="margin-top:15px">${icon("alert")}<div><strong>На проверку</strong>${esc(s.text)}<p>Этот сигнал не меняет уровень риска клиента.</p></div></div>`).join("")}` : empty("Проверка участка недоступна", "Нужны границы участка и верхний снимок с данными для геопривязки.", "location")}</div></section>`;
 }
 function valuationDetail(o) {
-  const v = o.valuation;
-  return `<section class="panel section-block form-width"><div class="panel-head"><h2>Оценка стоимости объекта</h2></div><div class="panel-body">${v ? `<p class="value-amount">${money(v.value_rub)}</p><p class="subtle">Диапазон: ${money(v.range_rub?.[0])} — ${money(v.range_rub?.[1])}</p><p class="strategy-copy" style="margin-top:20px">${esc(v.explanation)}</p><dl class="facts" style="margin-top:20px"><dt>Площадь застройки</dt><dd>${v.breakdown?.footprint_m2 ?? "—"} м²</dd><dt>Этажность</dt><dd>${v.breakdown?.floors ?? "—"}</dd><dt>Готовность</dt><dd>${v.breakdown?.readiness_pct ?? "—"}%</dd><dt>Удельная стоимость</dt><dd>${money(v.breakdown?.unit_cost_rub_m2)} / м²</dd><dt>Стоимость участка</dt><dd>${money(v.breakdown?.land_rub)}</dd></dl>${(v.warnings || []).map((w) => `<div class="note warning" style="margin-top:18px">${icon("info")}<div>${esc(w)}</div></div>`).join("")}` : empty("Оценка ещё не рассчитана", "Введите известную стоимость участка и запросите расчёт.", "house")}<form id="valuation-form" style="margin-top:25px"><div class="form-grid"><div class="form-group"><label for="land-value">Стоимость участка, ₽</label><input id="land-value" class="field" name="land_rub" type="number" min="0" step="1" value="${v?.breakdown?.land_rub ?? ""}"></div><div class="form-group"><label for="collateral-value">Залоговая стоимость, ₽</label><input id="collateral-value" class="field" name="collateral_value_rub" type="number" min="0" step="1" value="${o.loan?.collateral_value_rub ?? ""}"></div></div><div class="form-actions"><button class="btn primary" type="submit">${icon("refresh")}Пересчитать оценку</button></div></form></div></section>`;
+  return constructionCostPanel(o, inspectionHelpers());
 }
 async function journalDetail(o) {
   const actions = listItems(await request(`/objects/${o.id}/actions`));
@@ -537,7 +536,7 @@ async function objectPage(id) {
     ["photos", "Снимки"],
     ["material", "Материал стен"],
     ["land", "Участок"],
-    ["valuation", "Оценка"],
+    ["valuation", "Стоимость постройки"],
     ["journal", "Журнал"],
   ];
   let body;
@@ -1331,14 +1330,10 @@ document.addEventListener("submit", async (e) => {
     }
     if (form.id === "valuation-form") {
       const body = {};
-      if (supports(meta, "conductor")) {
-        for (const k of ["land_rub", "collateral_value_rub"])
-          if (fd.get(k) !== "") body[k] = Number(fd.get(k));
-      } else {
-        for (const k of ["area_m2", "unit_cost_rub_m2", "land_rub"])
-          body[k] = fd.get(k) === "" ? null : Number(fd.get(k));
-        body.rate_note = String(fd.get("rate_note") || "").trim();
-      }
+      for (const k of ["area_m2", "unit_cost_rub_m2", "land_rub"])
+        body[k] = fd.get(k) === "" ? null : Number(fd.get(k));
+      body.wall_material = fd.get("wall_material") || null;
+      body.rate_note = String(fd.get("rate_note") || "").trim();
       await request(`/objects/${currentObject.id}/valuation`, {
         method: "POST",
         body,
