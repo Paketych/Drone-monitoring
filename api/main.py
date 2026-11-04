@@ -149,7 +149,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 "readiness_review": True,
                 "risk": False,
                 "conductor": False,
-                "gigachat_analysis": True,
+                "llm_analysis": True,
                 "alerts": False,
                 "tasks": False,
                 "history": True,
@@ -198,20 +198,20 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     def create_object(body: ObjectCreate):
         return database.create_object(body.model_dump(mode="json"))
 
-    @app.get(prefix + "/gigachat/status", tags=["GigaChat"])
-    def gigachat_status():
-        return settings.gigachat.public_status(settings.mock)
+    @app.get(prefix + "/llm/status", tags=["LLM"])
+    def llm_status():
+        return settings.llm.public_status(settings.mock)
 
-    @app.get(prefix + "/objects/{object_id}/analysis", tags=["GigaChat"])
+    @app.get(prefix + "/objects/{object_id}/analysis", tags=["LLM"])
     def get_analysis(object_id: str):
         return analysis.latest(object_id)
 
-    @app.post(prefix + "/objects/{object_id}/analysis", status_code=202, tags=["GigaChat"])
+    @app.post(prefix + "/objects/{object_id}/analysis", status_code=202, tags=["LLM"])
     def request_analysis(object_id: str, body: AnalysisRequest | None = None):
         record = analysis.enqueue(object_id, force=body.force if body else False)
         return analysis.public(record, object_id)
 
-    @app.get(prefix + "/analyses/{analysis_id}", tags=["GigaChat"])
+    @app.get(prefix + "/analyses/{analysis_id}", tags=["LLM"])
     def get_analysis_job(analysis_id: str):
         record = analysis.repository.get(analysis_id)
         return analysis.public(record, record["object_id"])

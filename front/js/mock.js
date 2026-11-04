@@ -238,7 +238,7 @@ function fixture(n) {
     "MANUAL_INSPECTION",
   ];
   const hasFlight = n !== 1;
-  const source = n === 4 ? "rules_fallback" : "gigachat";
+  const source = n === 4 ? "rules_fallback" : "llm";
   const llm = n === 2 ? "pending" : n === 4 ? "unavailable" : "accepted";
   const signal =
     n === 10
@@ -389,7 +389,7 @@ function fixture(n) {
 }
 function settle(o) {
   const c = o.conductor;
-  if (c.llm_status === "accepted" && c.decision_source === "gigachat")
+  if (c.llm_status === "accepted" && c.decision_source === "llm")
     c.recommendation = {
       strategy_code: c.strategy?.code || null,
       next_step_code: c.next_step?.code || null,
@@ -558,7 +558,7 @@ export function applyStep(o, code, outcome, comment = "", user = "Сотрудн
     evidence: comment || "Исход внесён сотрудником",
   });
   o.conductor.llm_status = "accepted";
-  o.conductor.decision_source = "gigachat";
+  o.conductor.decision_source = "llm";
   settle(o);
   log(
     o,
@@ -703,7 +703,7 @@ export async function mockRequest(path, { method = "GET", body, user } = {}) {
         pending.set(id, count);
         if (count >= 2) {
           o.conductor.llm_status = "accepted";
-          o.conductor.decision_source = "gigachat";
+          o.conductor.decision_source = "llm";
           settle(o);
           save();
         }

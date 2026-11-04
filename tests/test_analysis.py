@@ -1,5 +1,4 @@
 import json
-import time
 from dataclasses import replace
 from datetime import date
 
@@ -13,7 +12,7 @@ from api.analysis_database import AnalysisRepository
 from api.config import Settings
 from api.database import Database
 from api.main import create_app
-from integrations.gigachat import GigaChatClient, GigaChatError, GigaChatSettings
+from integrations.llm import LLMClient, LLMError, LLMSettings
 from worker.service import Worker
 
 
@@ -103,7 +102,7 @@ class FakeClient:
             content["evidence_refs"] = ["invented.fact"]
         return {
             "content": json.dumps(content, ensure_ascii=False),
-            "model": "test-gigachat",
+            "model": "test-llm",
             "usage": {"total_tokens": 20},
         }
 
@@ -113,7 +112,13 @@ def setup(tmp_path):
     settings = Settings(
         storage_dir=tmp_path / "storage",
         mock=False,
-        gigachat=GigaChatSettings(enabled=True, credentials="test-key", auto_analyze=False),
+        llm=LLMSettings(
+            enabled=True,
+            api_key="test-key",
+            base_url="https://provider.example/v1",
+            model="test-model",
+            auto_analyze=False,
+        ),
     )
     database = Database(settings.database_path)
     database.initialize()
@@ -134,7 +139,7 @@ def test_async_api_worker_persistence_and_deduplication(setup):
     assert service.process_one() and fake.calls == 1
     with TestClient(create_app(settings)) as restarted:
         result = restarted.get(f"/api/v1/objects/{obj}/analysis").json()
-        assert result["decision_source"] == "gigachat" and result["llm_status"] == "accepted"
+        assert result["decision_source"] == "llm" and result["llm_status"] == "accepted"
         assert result["proposal_only"] and result["next_step"]["requires_confirmation"]
         assert "raw_response" not in result and "test-key" not in json.dumps(result)
         assert (
@@ -145,7 +150,7 @@ def test_async_api_worker_persistence_and_deduplication(setup):
             restarted.get(f"/api/v1/analyses/{result['analysis_id']}").json()["llm_status"]
             == "accepted"
         )
-        assert restarted.get("/api/v1/gigachat/status").json()["configured"]
+        assert restarted.get("/api/v1/llm/status").json()["configured"]
 
 
 @pytest.mark.parametrize("mode", ["mock", "disabled", "missing_key"])
@@ -154,9 +159,9 @@ def test_disabled_modes_never_call_the_model(setup, mode):
     if mode == "mock":
         settings = replace(settings, mock=True)
     elif mode == "disabled":
-        settings = replace(settings, gigachat=replace(settings.gigachat, enabled=False))
+        settings = replace(settings, llm=replace(settings.llm, enabled=False))
     else:
-        settings = replace(settings, gigachat=replace(settings.gigachat, credentials=""))
+        settings = replace(settings, llm=replace(settings.llm, api_key=""))
     fake = FakeClient()
     service = AnalysisService(settings, database, client=fake)
     service.enqueue(obj)
@@ -183,7 +188,7 @@ def test_api_failure_keeps_rule_based_result(setup):
     service = AnalysisService(
         settings,
         database,
-        client=FakeClient(error=GigaChatError("TIMEOUT", "Время ожидания истекло")),
+        client=FakeClient(error=LLMError("TIMEOUT", "Время ожидания истекло")),
     )
     service.enqueue(obj)
     service.process_one()
@@ -233,15 +238,7 @@ def test_full_http_client_api_queue_and_validation(setup):
 
     def handler(request):
         requests.append(request.url.path)
-        if request.url.path.endswith("/oauth"):
-            return httpx.Response(
-                200,
-                json={
-                    "access_token": "transport-test-token",
-                    "expires_at": int((time.time() + 1800) * 1000),
-                },
-            )
-        assert request.headers["Authorization"] == "Bearer transport-test-token"
+        assert request.headers["Authorization"] == "Bearer test-key"
         body = json.loads(request.content)
         assert "PRIVATE_ADDRESS" not in body["messages"][1]["content"]
         snapshot = json.loads(body["messages"][1]["content"])
@@ -261,18 +258,18 @@ def test_full_http_client_api_queue_and_validation(setup):
             },
         )
 
-    giga = GigaChatClient(settings.gigachat, transport=httpx.MockTransport(handler))
+    llm_client = LLMClient(settings.llm, transport=httpx.MockTransport(handler))
     try:
         with TestClient(create_app(settings)) as client:
             response = client.post(f"/api/v1/objects/{obj}/analysis", json={})
             assert response.status_code == 202
-            worker = Worker(settings, analysis_client=giga)
+            worker = Worker(settings, analysis_client=llm_client)
             assert worker.process_one()
             result = client.get(f"/api/v1/objects/{obj}/analysis").json()
             assert result["llm_status"] == "accepted" and result["model"] == "transport-model"
-            assert requests == ["/api/v2/oauth", "/v1/chat/completions"]
+            assert requests == ["/v1/chat/completions"]
     finally:
-        giga.close()
+        llm_client.close()
 
 
 def test_worker_and_manual_review_automatically_enqueue_analysis(setup):
@@ -280,7 +277,7 @@ def test_worker_and_manual_review_automatically_enqueue_analysis(setup):
     from test_readiness import RafterDetector, upload_full
 
     settings, database, obj = setup
-    settings = replace(settings, gigachat=replace(settings.gigachat, auto_analyze=True))
+    settings = replace(settings, llm=replace(settings.llm, auto_analyze=True))
     fake = FakeClient()
     with TestClient(create_app(settings)) as client:
         flight = upload_full(client, obj)

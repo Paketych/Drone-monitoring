@@ -360,7 +360,7 @@ function strategyBlock(o) {
       "clock",
     );
   const source =
-    c.decision_source === "gigachat"
+    c.decision_source === "llm"
       ? "AI · рекомендация проверена"
       : c.llm_status === "pending"
         ? "Готовится AI-рекомендация"
@@ -476,7 +476,7 @@ function inspectionHelpers() {
 async function inspectionObjectPage(id) {
   const o = await request(`/objects/${encodeURIComponent(id)}`);
   currentObject = o;
-  if (supports(meta, "gigachat_analysis"))
+  if (supports(meta, "llm_analysis"))
     o.ai_analysis = await request(
       `/objects/${encodeURIComponent(id)}/analysis`,
     );
