@@ -6,7 +6,7 @@
     python ml/prepare_dataset.py --include-prelabel    # взять и непроверенные рамки модели
 
 Объект — папка dataset/<N> или house_<N> внешних фото: снимки одного дома не попадают в обе выборки
-(BACKEND.md, раздел 3.7). По умолчанию берутся только снимки со статусом reviewed.
+(docs/archive/BACKEND_PLAN.md, раздел 3.7). По умолчанию берутся только снимки со статусом reviewed.
 Результат — data/yolo/{images,labels}/{train,val} и data/yolo/data.yaml; папка генерируется заново.
 """
 

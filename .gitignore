@@ -1,17 +1,48 @@
+# Python environments and caches
 .venv/
+venv/
 __pycache__/
 *.py[cod]
 .pytest_cache/
 .ruff_cache/
-.env
-.local/
-weights/
+.mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
 
-# ML: датасет YOLO собирается скриптом, веса — по ссылке (README, разделы 2 и 11.1)
-data/
-runs/
+# Local configuration and application data
+.env
+.env.*
+!.env.example
+.local/
+*.sqlite
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+
+# Model weights and generated ML datasets
+/weights/*
+!/weights/README.md
+/data/
+/runs/
 *.pt
 *.onnx
+/видео/
 
-# кадры и ролики ml/download_drone_dataset.py
-видео/
+# Frontend dependencies, reports and local tooling
+node_modules/
+.cache/
+test-results/
+playwright-report/
+.impeccable/
+*.log
+
+# Editor, operating system and office temporary files
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+~$*
+*.tmp
+*.bak

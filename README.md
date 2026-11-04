@@ -46,7 +46,7 @@ python -m venv .venv
 if (-not (Test-Path -LiteralPath '.env')) { Copy-Item -LiteralPath '.env.example' -Destination '.env' }
 ```
 
-`requirements-inference.txt` включает бэкенд и Ultralytics `>=8.4`, необходимый для весов YOLO26. Для работы API без локальных моделей достаточно `requirements-backend.txt`. Зависимости обучения из `req.txt` для запуска сервиса не требуются.
+`requirements-inference.txt` включает бэкенд и Ultralytics `>=8.4`, необходимый для весов YOLO26. Для работы API без локальных моделей достаточно `requirements-backend.txt`. Зависимости обучения из `requirements-training.txt` для запуска сервиса не требуются.
 
 ### 2. Подключить модели
 
@@ -132,7 +132,7 @@ GIGACHAT_MODEL=GigaChat-2
 GIGACHAT_AUTO_ANALYZE=1
 ```
 
-Выберите модель, доступную вашему ключу. При необходимости добавьте доверенный сертификат через `GIGACHAT_CA_BUNDLE`; подробности — в [инструкции подключения](material/GIGACHAT_SETUP.md).
+Выберите модель, доступную вашему ключу. При необходимости добавьте доверенный сертификат через `GIGACHAT_CA_BUNDLE`; подробности — в [инструкции подключения](docs/GIGACHAT.md).
 
 Проверка авторизации и доступных моделей:
 
@@ -166,7 +166,9 @@ GIGACHAT_AUTO_ANALYZE=1
 | `configs/` | Классы, пороги, правила готовности и тарифы |
 | `front/` | Веб-интерфейс и Node.js-прокси |
 | `tests/`, `front/tests/` | Проверки бэкенда, интерфейса и интеграции |
-| `material/` | Документация и материалы кейса |
+| `docs/` | Рабочая документация, исходные материалы и архив планов |
+| `ml/` | Подготовка разметки и обучение моделей |
+| `scripts/` | Проверка GPU и экспорт тарифов для демо |
 
 По умолчанию SQLite, загруженные копии снимков и результаты находятся в `.local/material-backend/`. Путь меняется через `STORAGE_DIR`; API и воркер должны использовать одно хранилище. Исходный `dataset/` сервис не изменяет. Переменные окружения имеют приоритет над `.env`.
 
@@ -196,10 +198,12 @@ npm.cmd --prefix front run test:integration
 
 ## Документация
 
-- [Запуск общей сборки](material/INTEGRATION.md)
-- [Контракт действующего API материалов](material/MATERIAL_API.md)
-- [Подключение YOLO и правила обработки стен](material/YOLO_INTEGRATION.md)
-- [Настройка и ограничения GigaChat](material/GIGACHAT_SETUP.md)
-- [Расчёт стоимости постройки](material/VALUATION.md)
-- [Простое объяснение для защиты](material/HOW_IT_WORKS.md)
-- [Общий проектный контракт и планы команды](material/API.md) — отдельные разделы описывают будущие функции; реализованные маршруты доступны в Swagger.
+- [Вся документация](docs/README.md)
+- [Исходные материалы кейса](docs/case/README.md)
+- [Запуск общей сборки](docs/INTEGRATION.md)
+- [Контракт действующего API материалов](docs/API.md)
+- [Подключение YOLO и правила обработки стен](docs/YOLO_INTEGRATION.md)
+- [Настройка и ограничения GigaChat](docs/GIGACHAT.md)
+- [Расчёт стоимости постройки](docs/VALUATION.md)
+- [Простое объяснение для защиты](docs/HOW_IT_WORKS.md)
+- [Общий проектный контракт и планы команды](docs/archive/API_PLAN.md) — отдельные разделы описывают будущие функции; реализованные маршруты доступны в Swagger.

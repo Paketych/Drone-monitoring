@@ -1,4 +1,4 @@
-"""Обучение детектора агента готовности (BACKEND.md, разделы 3.2 и 3.7).
+"""Обучение детектора агента готовности (docs/archive/BACKEND_PLAN.md, разделы 3.2 и 3.7).
 
     python ml/train.py                                # YOLO26m, imgsz 1280, 150 эпох, val = объекты 6 и 13
     python ml/train.py --model yolo11m.pt             # запасной вариант

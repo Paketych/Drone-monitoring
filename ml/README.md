@@ -1,6 +1,6 @@
 # ML: детектор агента готовности
 
-Разметка снимков под YOLO-детектор (классы — `configs/classes.yaml`, BACKEND.md раздел 3.2), материал стен для классификатора (`configs/materials.yaml`, раздел 5.2), обмен с Label Studio и обучение.
+Разметка снимков под YOLO-детектор (классы — `configs/classes.yaml`, [первоначальный план](../docs/archive/BACKEND_PLAN.md), раздел 3.2), материал стен для классификатора (`configs/materials.yaml`, раздел 5.2), обмен с Label Studio и обучение.
 
 ```
 ml/
@@ -14,14 +14,13 @@ ml/
 ├── labelstudio.py                     # разметка <-> Label Studio
 ├── prepare_dataset.py                 # data/yolo/ с делением train/val по объектам
 ├── train.py                           # обучение детектора
-├── train_material.py                  # обучение классификатора материала стен
-└── download_drone_dataset.py          # скачивание стоковых роликов (сейчас блокируется сайтами)
+└── train_material.py                  # обучение классификатора материала стен
 ```
 
 ## Обучение
 
 ```bash
-pip install -r req.txt
+pip install -r requirements-training.txt
 python ml/train.py                 # YOLO26m, imgsz 1280, batch 2, 150 эпох, val = объекты 6 и 13
 python ml/train.py --batch 8       # на видеокарте от 12 ГБ
 python ml/train.py --model yolo11m.pt
@@ -49,7 +48,7 @@ python ml/train.py --name readiness_v2; python ml/train_material.py
 
 ## Разметка
 
-232 снимка, 42 объекта, 1537 рамок, 13 классов.
+Ниже сохранены описания собранных партий. Точный состав определяется текущим `manifest.csv` и наличием исходных файлов на машине; не все внешние фотографии входят в репозиторий.
 
 | Источник | Снимков | Что |
 |---|---|---|
@@ -119,3 +118,7 @@ python ml/labelstudio.py export
    Разметка в `annotations/labels/`, материалы и ракурсы в `manifest.csv` обновятся, снимки станут `reviewed`.
 
 Если классы в `configs/classes.yaml` или материалы поменялись, пересоздать файлы: `python ml/labelstudio.py config` и `python ml/labelstudio.py export`.
+
+## Проверка GPU
+
+Необязательная диагностика CUDA перед обучением: `python scripts/check_gpu.py` из корня проекта. Для обычного запуска API GPU не требуется. Общая документация — в [docs/](../docs/README.md).

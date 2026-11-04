@@ -1,4 +1,4 @@
-"""Обучение классификатора материала стен (BACKEND.md, разделы 5.1–5.7).
+"""Обучение классификатора материала стен (docs/archive/BACKEND_PLAN.md, разделы 5.1–5.7).
 
     python ml/train_material.py                          # YOLO26m-cls, imgsz 384, 60 эпох
     python ml/train_material.py --val-objects 6,house_101,house_110

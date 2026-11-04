@@ -1,4 +1,4 @@
-# API for wall-material processing; training dependencies stay in req.txt.
+# API for wall-material processing; training dependencies stay in requirements-training.txt.
 fastapi>=0.115,<1
 uvicorn>=0.30,<1
 python-multipart>=0.0.20,<1
