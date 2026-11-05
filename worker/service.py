@@ -1,4 +1,5 @@
 import logging
+import time
 
 from agents.analysis.service import AnalysisService
 from agents.geo import flight_point
@@ -16,6 +17,7 @@ from agents.targeting import exclusion_reason, locate_target
 from api.config import Settings
 from api.database import Database
 from api.images import load_oriented_image, save_crop, save_preview
+from api.object_deletion import cleanup_deleted_files
 from schemas.material import TOP_VIEWS, Observation, ViewObservation
 from schemas.readiness import Detection
 
@@ -35,6 +37,7 @@ class Worker:
         self.database.initialize()
         self.analysis = AnalysisService(settings, self.database, client=analysis_client)
         self._analysis_next = False
+        self._next_file_cleanup = 0.0
         self.load_errors: dict[str, dict] = {}
         self.predictor = (
             predictor
@@ -71,6 +74,10 @@ class Worker:
             return model
 
     def process_one(self) -> bool:
+        if time.monotonic() >= self._next_file_cleanup:
+            self._next_file_cleanup = time.monotonic() + 30
+            if cleanup_deleted_files(self.database, self.settings.storage_dir):
+                return True
         if self._analysis_next and self.analysis.process_one():
             self._analysis_next = False
             return True

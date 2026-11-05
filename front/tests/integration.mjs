@@ -114,7 +114,11 @@ try {
       forbidden.push(request.url());
   });
   page.on("response", (response) => {
-    if (response.status() >= 400 && response.url().includes("/api/v1/"))
+    if (
+      response.status() >= 400 &&
+      response.url().includes("/api/v1/") &&
+      !(response.status() === 409 && response.request().method() === "DELETE")
+    )
       failures.push(`${response.status()} ${response.url()}`);
   });
   await page.goto(base);
@@ -310,6 +314,156 @@ try {
       screenshot: path.join(folder, "connected.png"),
     }),
   );
+  const control = await (
+    await page.request.post(`${base}/api/v1/objects`, {
+      data: { address: "Контрольный объект" },
+    })
+  ).json();
+  const deletedImages = (
+    await (
+      await page.request.get(
+        `${base}/api/v1/flights/${card.last_flight.flight_id}/images`,
+      )
+    ).json()
+  ).map((i) => i.url);
+  let deleteRequests = 0;
+  page.on("request", (req) => {
+    if (req.method() === "DELETE") deleteRequests++;
+  });
+  const deleteButton = page.getByRole("button", {
+    name: "Удалить объект",
+    exact: true,
+  });
+  await deleteButton.click();
+  const modal = page.locator("#dialog");
+  await modal.getByRole("button", { name: "Отмена", exact: true }).click();
+  assert.equal(deleteRequests, 0);
+  assert.equal(
+    (await page.request.get(`${base}/api/v1/objects/${objectId}`)).status(),
+    200,
+  );
+  await deleteButton.click();
+  await page.route(`**/api/v1/objects/${objectId}`, async (route) => {
+    if (route.request().method() === "DELETE")
+      await route.fulfill({
+        status: 409,
+        contentType: "application/json",
+        body: JSON.stringify({
+          error: {
+            code: "OBJECT_BUSY",
+            message:
+              "Дождитесь завершения обработки фотографий и AI-сводки, затем повторите удаление",
+          },
+        }),
+      });
+    else await route.continue();
+  });
+  await modal
+    .getByRole("button", { name: "Удалить объект", exact: true })
+    .click();
+  await modal.getByRole("alert").waitFor();
+  assert.ok(
+    (await modal.getByRole("alert").textContent()).includes("Дождитесь"),
+  );
+  assert.equal(
+    (await page.request.get(`${base}/api/v1/objects/${objectId}`)).status(),
+    200,
+  );
+  await page.unroute(`**/api/v1/objects/${objectId}`);
+  await modal
+    .getByRole("button", { name: "Удалить объект", exact: true })
+    .click();
+  await page.waitForURL(`${base}/#/objects`);
+  await page.getByText("Контрольный объект", { exact: true }).waitFor();
+  assert.equal(deleteRequests, 2);
+  assert.equal(
+    (await page.request.get(`${base}/api/v1/objects/${objectId}`)).status(),
+    404,
+  );
+  assert.equal(
+    (await page.request.get(`${base}/api/v1/objects/${control.id}`)).status(),
+    200,
+  );
+  for (const url of deletedImages)
+    assert.equal((await page.request.get(base + url)).status(), 404);
+  await page.reload();
+  await page.getByText("Контрольный объект", { exact: true }).waitFor();
+  await page.goto(`${base}/#/objects/${control.id}`);
+  await page
+    .getByRole("heading", { name: "Контрольный объект", exact: true })
+    .waitFor();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page
+    .getByRole("button", { name: "Удалить объект", exact: true })
+    .click();
+  await modal
+    .getByRole("heading", { name: "Удаление объекта", exact: true })
+    .waitFor();
+  assert.equal(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth > innerWidth,
+    ),
+    false,
+  );
+  await page.screenshot({
+    path: path.join(folder, "delete-mobile.png"),
+    animations: "disabled",
+  });
+  await modal.getByRole("button", { name: "Отмена", exact: true }).click();
+  const demoContext = await browser.newContext({
+    viewport: { width: 1440, height: 1000 },
+    locale: "ru-RU",
+  });
+  await demoContext.addInitScript(() =>
+    localStorage.setItem(
+      "sibcode.front.settings",
+      JSON.stringify({
+        mode: "demo",
+        user: "test",
+        display_name: "Проверяющий",
+      }),
+    ),
+  );
+  const demoPage = await demoContext.newPage();
+  demoPage.on("pageerror", (e) => failures.push(e.message));
+  await demoPage.goto(`${base}/#/objects/obj_demo_1`);
+  await demoPage
+    .getByRole("button", { name: "Удалить объект", exact: true })
+    .click();
+  await demoPage
+    .locator("#dialog")
+    .getByRole("button", { name: "Удалить объект", exact: true })
+    .click();
+  await demoPage.waitForURL(`${base}/#/objects`);
+  await demoPage.reload();
+  await demoPage
+    .getByRole("heading", { name: "Объекты", exact: true })
+    .waitFor();
+  const missing = await demoPage.evaluate(async () => {
+    const api = await import("/js/api.js");
+    try {
+      await api.request("/objects/obj_demo_1");
+      return false;
+    } catch (e) {
+      return e.code === "NOT_FOUND";
+    }
+  });
+  assert.equal(missing, true);
+  assert.deepEqual(failures, []);
+  console.log(
+    JSON.stringify({
+      deletionBrowser: true,
+      cancelPreservesObject: true,
+      busyShowsError: true,
+      deletionPersists: true,
+      otherObjectPreserved: true,
+      photosUnavailable: true,
+      mobileNoOverflow: true,
+      demoDeletionPersists: true,
+      errors: failures,
+    }),
+  );
+  await demoContext.close();
 } catch (error) {
   console.error(logs.join("").slice(-7000));
   throw error;
@@ -321,7 +475,17 @@ try {
         new Promise((resolve) => {
           if (child.exitCode !== null) return resolve();
           child.once("exit", resolve);
-          child.kill();
+          if (process.platform === "win32") {
+            try {
+              execFileSync(
+                "taskkill.exe",
+                ["/PID", String(child.pid), "/T", "/F"],
+                { windowsHide: true, stdio: "ignore" },
+              );
+            } catch {
+              child.kill();
+            }
+          } else child.kill();
         }),
     ),
   );

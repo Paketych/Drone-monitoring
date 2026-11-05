@@ -193,6 +193,12 @@ class Database:
 
     def enqueue(self, flight: dict, images: list[dict]) -> None:
         with self.connection() as db:
+            db.execute("BEGIN IMMEDIATE")
+            if (
+                db.execute("SELECT 1 FROM objects WHERE id=?", (flight["object_id"],)).fetchone()
+                is None
+            ):
+                raise ServiceError(404, "NOT_FOUND", "Объект не найден")
             db.execute(
                 """INSERT INTO flights
                 (id,object_id,status,uploaded_at,flown_at,target_confirmed,is_demo)
@@ -416,6 +422,7 @@ class Database:
 
     def add_review(self, flight_id: str, review: dict) -> dict:
         with self.connection() as db:
+            db.execute("BEGIN IMMEDIATE")
             row = db.execute(
                 "SELECT object_id,status FROM flights WHERE id=?", (flight_id,)
             ).fetchone()
@@ -447,6 +454,7 @@ class Database:
 
     def add_readiness_review(self, flight_id: str, review: dict) -> dict:
         with self.connection() as db:
+            db.execute("BEGIN IMMEDIATE")
             row = db.execute("SELECT status FROM flights WHERE id=?", (flight_id,)).fetchone()
             if row is None:
                 raise ServiceError(404, "NOT_FOUND", "Облёт не найден")

@@ -669,6 +669,28 @@ export async function mockRequest(path, { method = "GET", body, user } = {}) {
   }
   if (entity === "objects" && id && id !== "import") {
     const o = find(id);
+    if (!part && method === "DELETE") {
+      if (
+        o.flights.some((flight) => flight.status === "processing") ||
+        o.conductor.llm_status === "pending"
+      )
+        error(
+          "OBJECT_BUSY",
+          "Дождитесь завершения обработки фотографий и AI-сводки, затем повторите удаление",
+        );
+      for (const flight of o.flights)
+        for (const image of flight.images || [])
+          for (const url of new Set([image.url, image.thumb_url]))
+            if (typeof url === "string" && url.startsWith("blob:"))
+              URL.revokeObjectURL(url);
+      objects.splice(
+        objects.findIndex((object) => object.id === id),
+        1,
+      );
+      pending.delete(id);
+      save();
+      return { id, deleted: true };
+    }
     refreshDemoValuation(o);
     if (!part) return structuredClone({ ...o, strategy: o.conductor.strategy });
     if (part === "history")

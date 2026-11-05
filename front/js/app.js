@@ -1,4 +1,5 @@
 import { icon } from "./icons.js";
+import { objectDeletionDialog } from "./object-deletion.js";
 import {
   request,
   settings,
@@ -151,7 +152,7 @@ async function submit(form, callback) {
   if (button) {
     button.disabled = true;
     button.dataset.original = button.innerHTML;
-    button.innerHTML = '<span class="spinner"></span> Сохраняем…';
+    button.innerHTML = `<span class="spinner"></span> ${form.id === "object-delete-form" ? "Удаляем…" : "Сохраняем…"}`;
   }
   form.querySelector(".form-error")?.remove();
   try {
@@ -470,6 +471,14 @@ async function inspectionObjectsPage() {
   );
 }
 
+function objectActions() {
+  return (
+    btn("Загрузить облёт", "upload-object", "primary", "upload") +
+    (settings().mode === "demo" || supports(meta, "object_delete")
+      ? btn("Удалить объект", "object-delete", "danger")
+      : "")
+  );
+}
 function inspectionHelpers() {
   return { heading, btn, objectLink, esc, dataBadge, date, label, money };
 }
@@ -513,7 +522,7 @@ async function inspectionObjectPage(id) {
     heading(
       esc(o.address),
       esc(o.cadastral || "Кадастровый номер не указан"),
-      btn("Загрузить облёт", "upload-object", "primary", "upload"),
+      objectActions(),
     ) +
     `<div class="tabs detail-tabs" role="tablist" aria-label="Разделы объекта">${tabs.map(([key, title]) => `<button role="tab" aria-selected="${objectTab === key}" class="${objectTab === key ? "active" : ""}" data-action="object-tab" data-tab="${key}">${title}</button>`).join("")}</div>${body}`
   );
@@ -552,7 +561,7 @@ async function objectPage(id) {
     heading(
       esc(o.address),
       esc(o.region || "Объект индивидуального жилищного строительства"),
-      btn("Загрузить облёт", "upload-object", "primary", "upload"),
+      objectActions(),
     ) +
     `<div class="object-header"><div class="object-info"><span>Кадастр: <strong>${esc(o.cadastral)}</strong></span><span>Кредит: <strong>${esc(o.loan_id || "Не указан")}</strong></span><span>${o.pledged ? "Залог оформлен" : "Залог не оформлен"}</span>${dataBadge(o.data_status)}</div></div><div class="risk-explanation" style="--risk-color:${color(r.risk_level)}">${icon(r.risk_level === "green" ? "check" : "alert")}<div><strong>${esc(label("risk_levels", r.risk_level))}</strong>${esc(r.explanation || "Оценка риска ещё не сформирована.")}</div></div><div class="tabs detail-tabs" role="tablist" aria-label="Разделы объекта">${tabs.map(([key, title]) => `<button role="tab" aria-selected="${objectTab === key}" class="${objectTab === key ? "active" : ""}" data-action="object-tab" data-tab="${key}">${title}</button>`).join("")}</div>${body}`
   );
@@ -1008,6 +1017,14 @@ document.addEventListener("click", async (e) => {
       chooseUpload();
       return;
     }
+    if (action === "object-delete") {
+      if (currentObject)
+        showDialog(
+          "Удаление объекта",
+          objectDeletionDialog(currentObject, esc),
+        );
+      return;
+    }
     if (action === "upload-object") {
       location.hash = `#/upload/${currentObject.id}`;
       return;
@@ -1209,6 +1226,23 @@ document.addEventListener("submit", async (e) => {
     return;
   }
   await submit(form, async () => {
+    if (form.id === "object-delete-form") {
+      const id = form.dataset.objectId;
+      await request(`/objects/${encodeURIComponent(id)}`, { method: "DELETE" });
+      const onDeletedObject = currentObject?.id === id;
+      if (dialog.contains(form)) dialog.close();
+      if (onDeletedObject) {
+        clearTimeout(pollTimer);
+        currentObject = null;
+        objectTab = "overview";
+        filters.page = 1;
+      }
+      await refresh();
+      if (onDeletedObject) location.hash = "#/objects";
+      else await render();
+      toast("Объект удалён.");
+      return;
+    }
     if (form.id === "settings-form") {
       const prior = settings();
       const next = {

@@ -22,6 +22,7 @@ from api.config import Settings
 from api.database import Database
 from api.errors import ServiceError
 from api.images import inspect_image
+from api.object_deletion import cleanup_deleted_files, delete_object
 from api.presentation import MATERIAL_REVIEW_REASONS, MATERIAL_STATUSES
 from api.valuation_database import ValuationRepository
 from schemas.analysis import AnalysisRequest
@@ -61,6 +62,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     @asynccontextmanager
     async def lifespan(application: FastAPI):
         database.initialize()
+        cleanup_deleted_files(database, settings.storage_dir)
         yield
 
     app = FastAPI(
@@ -154,6 +156,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 "tasks": False,
                 "history": True,
                 "actions": True,
+                "object_delete": True,
                 "land": False,
                 "valuation": True,
                 "act": False,
@@ -250,6 +253,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             "page": page,
             "page_size": page_size,
         }
+
+    @app.delete(prefix + "/objects/{object_id}", tags=["Объекты"])
+    def remove_object(object_id: str):
+        return delete_object(database, settings.storage_dir, object_id)
 
     @app.get(prefix + "/objects/{object_id}", tags=["Объекты"])
     def get_object(object_id: str):

@@ -37,6 +37,8 @@ class AnalysisRepository:
     ) -> dict:
         with self.database.connection() as db:
             db.execute("BEGIN IMMEDIATE")
+            if db.execute("SELECT 1 FROM objects WHERE id=?", (object_id,)).fetchone() is None:
+                raise ServiceError(404, "NOT_FOUND", "Объект не найден")
             existing = db.execute(
                 "SELECT * FROM analyses WHERE object_id=? AND fingerprint=? "
                 "AND (status IN ('queued','processing') OR (llm_status='accepted' AND ?=0)) "
