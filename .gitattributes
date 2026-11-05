@@ -1,0 +1,16 @@
+# Use LF for text in both the repository and working tree.
+* text=auto eol=lf
+
+# Treat binary assets and model files as binary.
+*.jpg binary -eol
+*.jpeg binary -eol
+*.png binary -eol
+*.gif binary -eol
+*.webp binary -eol
+*.ico binary -eol
+*.pdf binary -eol
+*.docx binary -eol
+*.xlsx binary -eol
+*.zip binary -eol
+*.pt binary -eol
+*.onnx binary -eol

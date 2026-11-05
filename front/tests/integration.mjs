@@ -58,7 +58,7 @@ try {
   const env = {
     STORAGE_DIR: path.join(folder, "db"),
     MOCK: "1",
-    GIGACHAT_ENABLED: "0",
+    LLM_ENABLED: "0",
     PYTHONIOENCODING: "utf-8",
   };
   start(

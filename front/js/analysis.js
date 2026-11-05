@@ -34,7 +34,7 @@ export function analysisPanel(report, { esc, btn }) {
     : !connection.enabled
       ? "Подключение к AI выключено."
       : !connection.configured
-        ? "Ключ доступа к AI ещё не задан на сервере."
+        ? "На сервере не заданы ключ, адрес API или модель AI."
         : "";
   return `<section class="panel section-block" id="ai-analysis"><div class="panel-head"><h2>AI-сводка инспекции</h2><span>${esc(title)}</span></div><div class="panel-body"><p>${esc(report.explanation)}</p>${report.next_step ? `<p style="margin-top:12px"><strong>Следующий шаг:</strong> ${esc(report.next_step.label)}</p>` : ""}<p class="subtle" style="margin-top:12px">Это предложение для сотрудника. Действия не выполняются автоматически.</p>${note ? `<p class="subtle">${esc(note)}</p>` : ""}${report.error && !note ? `<p class="subtle">${esc(report.error.message)}</p>` : ""}<details><summary>Факты, на которых основан вывод</summary><dl class="facts">${(report.evidence_refs || []).map((ref) => `<dt>${esc(FACT_LABELS[ref] || ref)}</dt><dd>${esc(report.facts?.[ref] === null ? "Неизвестно" : report.facts?.[ref] === true ? "Да" : report.facts?.[ref] === false ? "Нет" : String(report.facts?.[ref]))}</dd>`).join("")}</dl></details><div class="action-buttons" style="margin-top:16px">${btn(pending ? "Готовится заключение…" : "Обновить AI-сводку", "analysis-request", "small", "", pending ? "disabled" : "")}</div></div></section>`;
 }

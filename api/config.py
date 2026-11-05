@@ -4,7 +4,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
-from integrations.gigachat.config import GigaChatSettings
+from integrations.llm.config import LLMSettings
 
 
 @dataclass(frozen=True)
@@ -19,7 +19,7 @@ class Settings:
     mock: bool = True
     job_lease_seconds: int = 900
     cors_origins: tuple[str, ...] = ("http://localhost:5173", "http://localhost:3000")
-    gigachat: GigaChatSettings = field(default_factory=GigaChatSettings)
+    llm: LLMSettings = field(default_factory=LLMSettings)
 
     @classmethod
     def from_env(cls) -> "Settings":
@@ -30,7 +30,7 @@ class Settings:
             model_factory=os.getenv("MATERIAL_MODEL_FACTORY") or None,
             detector_factory=os.getenv("DETECTOR_FACTORY") or None,
             mock=os.getenv("MOCK", "1") == "1",
-            gigachat=GigaChatSettings.from_env(),
+            llm=LLMSettings.from_env(),
             cors_origins=tuple(
                 value.strip()
                 for value in os.getenv(

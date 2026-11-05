@@ -5,7 +5,7 @@ from datetime import date, datetime, timedelta, timezone
 from schemas.analysis import Recommendation
 
 RULES_VERSION = "inspection-analysis@v2"
-PROMPT_VERSION = "inspection-summary@v2"
+PROMPT_VERSION = "inspection-summary@v3"
 STAGES = ("none", "foundation", "walls", "roof", "openings", "facade", "done")
 STEP_LABELS = {
     "FLIGHT_TASK": "Запланировать контрольный облёт",

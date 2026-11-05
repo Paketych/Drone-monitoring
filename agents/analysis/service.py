@@ -11,7 +11,7 @@ from agents.analysis.context import (
 from api.analysis_database import AnalysisRepository
 from api.config import Settings
 from api.database import Database
-from integrations.gigachat import GigaChatClient, GigaChatError
+from integrations.llm import LLMClient, LLMError
 
 logger = logging.getLogger(__name__)
 
@@ -29,18 +29,21 @@ class AnalysisService:
             self._client.close()
 
     def context(self, object_id: str) -> dict:
-        return build_context(
+        context = build_context(
             self.database.object(object_id), utc_offset=self.settings.photo_utc_offset_hours
         )
+
+        context["_llm_configuration"] = self.settings.llm.configuration_fingerprint()
+        return context
 
     def enqueue(self, object_id: str, *, force: bool = False) -> dict:
         context = self.context(object_id)
         return self.repository.enqueue(
-            object_id, context, fingerprint(context), self.settings.gigachat.model, force=force
+            object_id, context, fingerprint(context), self.settings.llm.model, force=force
         )
 
     def automatic(self, object_id: str) -> None:
-        if self.settings.gigachat.enabled and self.settings.gigachat.auto_analyze:
+        if self.settings.llm.enabled and self.settings.llm.auto_analyze:
             self.enqueue(object_id)
 
     def public(self, record: dict | None, object_id: str) -> dict:
@@ -65,7 +68,7 @@ class AnalysisService:
             "object_id": object_id,
             "status": record["status"] if record else "idle",
             "llm_status": llm_status,
-            "decision_source": "gigachat" if recommendation else "rules_fallback",
+            "decision_source": "llm" if recommendation else "rules_fallback",
             "recommendation": recommendation,
             "explanation": effective["reason"],
             "strategy_code": effective["strategy_code"],
@@ -83,12 +86,12 @@ class AnalysisService:
             "proposal_only": True,
             "model": (record["response_model"] or record["requested_model"])
             if record
-            else self.settings.gigachat.model,
+            else self.settings.llm.model,
             "rules_version": context["rules_version"],
             "prompt_version": context["prompt_version"],
             "updated_at": record["updated_at"] if record else None,
             "error": error,
-            "connection": self.settings.gigachat.public_status(self.settings.mock),
+            "connection": self.settings.llm.public_status(self.settings.mock),
         }
 
     def latest(self, object_id: str) -> dict:
@@ -113,18 +116,18 @@ class AnalysisService:
                     error_message="Данные объекта изменились",
                 )
                 return True
-            config = self.settings.gigachat
-            if self.settings.mock or not config.enabled or not config.credentials:
+            config = self.settings.llm
+            if self.settings.mock or not config.enabled or not config.configured:
                 code, message = (
-                    ("MOCK_MODE", "Сетевые запросы GigaChat отключены в деморежиме сервера")
+                    ("MOCK_MODE", "Сетевые запросы AI отключены в деморежиме сервера")
                     if self.settings.mock
-                    else ("INTEGRATION_DISABLED", "Интеграция GigaChat выключена")
+                    else ("INTEGRATION_DISABLED", "Подключение к AI выключено")
                     if not config.enabled
-                    else ("NOT_CONFIGURED", "Не задан GIGACHAT_CREDENTIALS")
+                    else ("NOT_CONFIGURED", "Задайте LLM_API_KEY, LLM_BASE_URL и LLM_MODEL")
                 )
-                raise GigaChatError(code, message)
+                raise LLMError(code, message)
             if self._client is None:
-                self._client = GigaChatClient(config)
+                self._client = LLMClient(config)
             # The snapshot contains only whitelisted facts, never comments or object identifiers.
             snapshot = record["context"]
             response = self._client.generate(
@@ -163,8 +166,8 @@ class AnalysisService:
                 response_model=response_model,
                 usage=usage,
             )
-        except GigaChatError as error:
-            logger.warning("gigachat_unavailable analysis_id=%s code=%s", analysis_id, error.code)
+        except LLMError as error:
+            logger.warning("llm_unavailable analysis_id=%s code=%s", analysis_id, error.code)
             self.repository.finish(
                 analysis_id,
                 token,
@@ -180,7 +183,7 @@ class AnalysisService:
                 "STALE_CONTEXT",
             }
             code = str(error) if str(error) in safe_codes else "INVALID_RECOMMENDATION"
-            logger.warning("gigachat_rejected analysis_id=%s code=%s", analysis_id, code)
+            logger.warning("llm_rejected analysis_id=%s code=%s", analysis_id, code)
             self.repository.finish(
                 analysis_id,
                 token,
@@ -193,7 +196,7 @@ class AnalysisService:
             )
         except Exception:
             # No exception dump: third-party exceptions can contain private HTTP data.
-            logger.error("gigachat_processing_failed analysis_id=%s", analysis_id)
+            logger.error("llm_processing_failed analysis_id=%s", analysis_id)
             self.repository.finish(
                 analysis_id,
                 token,
