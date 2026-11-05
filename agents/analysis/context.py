@@ -85,7 +85,7 @@ def build_context(obj: dict, *, today: date | None = None, utc_offset: int = 7) 
         "readiness.status": ready.get("status"),
         "readiness.stage": effective.get("stage"),
         "readiness.readiness_pct": effective.get("readiness_pct"),
-        "readiness.bank_readiness": effective.get("bank_readiness"),
+        "readiness.level": effective.get("readiness_level"),
         "material.observed": fixed.get("observed"),
         "material.project": (obj.get("project") or {}).get("wall_material"),
         "material.match": fixed.get("match"),
@@ -146,10 +146,10 @@ def build_context(obj: dict, *, today: date | None = None, utc_offset: int = 7) 
             ["material.match"],
             "Зафиксировано отличие материала от проекта. Сотруднику нужно проверить документы и снимки.",
         )
-    elif lag is True or (facts["term.expired"] and effective.get("bank_readiness") != 100):
+    elif lag is True or (facts["term.expired"] and effective.get("readiness_level") != 100):
         pair, refs = (
             [None, "COMM_REASON"],
-            ["plan.lag_suspected"] if lag else ["term.expired", "readiness.bank_readiness"],
+            ["plan.lag_suspected"] if lag else ["term.expired", "readiness.level"],
         )
         reason = "Есть признак отставания от графика. Следует уточнить ситуацию у клиента; причина задержки по снимкам не устанавливается."
         if basis == "linear_assumption":

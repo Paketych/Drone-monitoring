@@ -82,7 +82,7 @@ def test_hidden_and_unclear_do_not_vote(tmp_path, monkeypatch, name):
 def test_walls_outside_target_are_not_sent_to_classifier(tmp_path, monkeypatch):
     predictor, calls = classifier(tmp_path, monkeypatch)
     result = predictor.predict_walls(
-        Image.new("RGB", (200, 200)), "img", [wall(included=False), wall(cls="fence")]
+        Image.new("RGB", (200, 200)), "img", [wall(included=False), wall(cls="building")]
     )
     assert calls == [] and result[0].visibility == "no_walls"
 

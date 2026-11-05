@@ -19,8 +19,6 @@ class DetectorClass(StrEnum):
     FACADE_FINISH = "facade_finish"
     BUILDING = "building"
     OUTBUILDING = "outbuilding"
-    FENCE = "fence"
-    PAVING = "paving"
 
 
 class Stage(StrEnum):
@@ -33,9 +31,9 @@ class Stage(StrEnum):
     DONE = "done"
 
 
-# Classes 0–9 describe construction progress; 10–13 belong to the land-use agent.
+# Classes 0–9 describe construction progress; the rest do not affect readiness.
 STAGE_CLASSES = tuple(DetectorClass)[:10]
-BankReadiness = Literal[0, 50, 100]
+ReadinessLevel = Literal[0, 50, 100]
 
 
 class Detection(Contract):
@@ -74,7 +72,7 @@ class ReadinessResult(Contract):
     stage: Stage | None = None
     stage_label: str | None = None
     readiness_pct: int | None = Field(default=None, ge=0, le=100)
-    bank_readiness: BankReadiness | None = None
+    readiness_level: ReadinessLevel | None = None
     confidence: Score = 0
     elements: dict[str, Element] = Field(default_factory=dict)
     windows_ratio: Score = 0
@@ -85,7 +83,7 @@ class ReadinessResult(Contract):
     review_reasons: list[str] = Field(default_factory=list)
 
 
-def default_bank_readiness(stage: Stage) -> BankReadiness:
+def default_readiness_level(stage: Stage) -> ReadinessLevel:
     return 0 if stage == Stage.NONE else 100 if stage == Stage.DONE else 50
 
 
@@ -93,8 +91,8 @@ class ReadinessReview(Contract):
     action: Literal["accept", "correct"]
     stage: Stage | None = None
     readiness_pct: int | None = Field(default=None, ge=0, le=100)
-    # Stages before «done» can match either 50 or 100 on the bank scale, so it may be given.
-    bank_readiness: BankReadiness | None = None
+    # Stages before «done» can match either 50 or 100 on the readiness scale, so it may be given.
+    readiness_level: ReadinessLevel | None = None
     comment: str = Field(default="", max_length=4000)
 
     @field_validator("comment", mode="before")
@@ -104,17 +102,17 @@ class ReadinessReview(Contract):
 
     @model_validator(mode="after")
     def validate_correction(self) -> "ReadinessReview":
-        manual = (self.stage, self.readiness_pct, self.bank_readiness)
+        manual = (self.stage, self.readiness_pct, self.readiness_level)
         if self.action == "accept":
             if any(value is not None for value in manual):
                 raise ValueError("При принятии стадия берётся из результата модели")
             return self
         if self.stage is None or self.readiness_pct is None or not self.comment.strip():
             raise ValueError("Для исправления укажите стадию, процент и комментарий")
-        if self.bank_readiness is None:
-            self.bank_readiness = default_bank_readiness(self.stage)
-        if (self.stage == Stage.NONE) != (self.bank_readiness == 0):
-            raise ValueError("Шкала банка 0 соответствует только стадии «Нет работ»")
-        if self.stage == Stage.DONE and self.bank_readiness != 100:
-            raise ValueError("Стадия «Готов» соответствует шкале банка 100")
+        if self.readiness_level is None:
+            self.readiness_level = default_readiness_level(self.stage)
+        if (self.stage == Stage.NONE) != (self.readiness_level == 0):
+            raise ValueError("Шкала готовности 0 соответствует только стадии «Нет работ»")
+        if self.stage == Stage.DONE and self.readiness_level != 100:
+            raise ValueError("Стадия «Готов» соответствует шкале готовности 100")
         return self

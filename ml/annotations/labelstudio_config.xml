@@ -13,8 +13,6 @@
     <Label value="door_installed" hint="Входная дверь" background="#D500F9"/>
     <Label value="facade_finish" hint="Отделка фасада" background="#B0BEC5"/>
     <Label value="building" hint="Дом сверху" background="#7C4DFF"/>
-    <Label value="paving" hint="Дорожки и площадки" background="#757575"/>
-    <Label value="fence" hint="Забор" background="#FF8A80"/>
   </RectangleLabels>
   <View visibleWhen="region-selected" whenTagName="label" whenLabelValue="walls_partial,walls_full"
         style="padding: 8px 12px; margin-top: 8px; border: 2px solid #E53935; border-radius: 6px">

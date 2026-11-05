@@ -1,6 +1,6 @@
 """Сборка датасета YOLO из ml/annotations/ с делением train/val по объектам.
 
-    python ml/prepare_dataset.py                       # val = объекты 6 и 13
+    python ml/prepare_dataset.py                       # val из ml/annotations/val_objects.txt
     python ml/prepare_dataset.py --val-objects 7,10    # другой состав val
     python ml/prepare_dataset.py --exclude-objects 12  # без объекта 12 (супермаркет)
     python ml/prepare_dataset.py --include-prelabel    # взять и непроверенные рамки модели
@@ -19,10 +19,17 @@ from collections import Counter
 from pathlib import Path
 
 import yaml
-from common import REPO, STATUS_PRELABEL, STATUS_REVIEWED, load_classes, read_labels, read_manifest
+from common import (
+    REPO,
+    STATUS_PRELABEL,
+    STATUS_REVIEWED,
+    load_classes,
+    load_val_objects,
+    read_labels,
+    read_manifest,
+)
 
 OUT_DIR = REPO / "data" / "yolo"
-DEFAULT_VAL_OBJECTS = "6,13"
 
 
 def _link_or_copy(src: Path, dst: Path) -> None:
@@ -120,8 +127,8 @@ def main() -> None:
     )
     parser.add_argument(
         "--val-objects",
-        default=DEFAULT_VAL_OBJECTS,
-        help="объекты для val через запятую: 6,13,house_101",
+        default=load_val_objects(),
+        help="объекты для val через запятую; по умолчанию ml/annotations/val_objects.txt",
     )
     parser.add_argument("--exclude-objects", default="", help="объекты, которые не берём вовсе")
     parser.add_argument(

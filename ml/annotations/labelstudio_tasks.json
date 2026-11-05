@@ -557,82 +557,6 @@
       }
      },
      {
-      "id": "2_DJI_20260812143359_0003_D_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 29.5,
-       "y": 58.5,
-       "width": 10.5,
-       "height": 19.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "2_DJI_20260812143359_0003_D_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 33.8,
-       "y": 91.0,
-       "width": 49.2,
-       "height": 3.6,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "2_DJI_20260812143359_0003_D_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 81.6,
-       "y": 67.8,
-       "width": 1.4,
-       "height": 32.2,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "2_DJI_20260812143359_0003_D_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 81.6,
-       "y": 67.8,
-       "width": 18.4,
-       "height": 1.8,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "2_DJI_20260812143359_0003_D_view",
       "type": "choices",
       "from_name": "view",
@@ -694,63 +618,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "2_DJI_20260812143415_0004_D_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 21.5,
-       "y": 53.5,
-       "width": 11.0,
-       "height": 21.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "2_DJI_20260812143415_0004_D_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 90.5,
-       "y": 0.0,
-       "width": 2.0,
-       "height": 100.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "2_DJI_20260812143415_0004_D_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 91.0,
-       "y": 69.5,
-       "width": 9.0,
-       "height": 1.7,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -1582,101 +1449,6 @@
       }
      },
      {
-      "id": "4_DJI_20260807184549_0001_D_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 55.8,
-       "y": 0.0,
-       "width": 5.4,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184549_0001_D_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 35.0,
-       "y": 13.5,
-       "width": 21.0,
-       "height": 5.1,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184549_0001_D_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 6.0,
-       "y": 0.0,
-       "width": 5.5,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184549_0001_D_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 30.5,
-       "y": 0.0,
-       "width": 2.7,
-       "height": 30.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184549_0001_D_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 30.8,
-       "y": 28.5,
-       "width": 69.2,
-       "height": 5.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "4_DJI_20260807184549_0001_D_view",
       "type": "choices",
       "from_name": "view",
@@ -1909,120 +1681,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "building"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184615_0002_D_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 38.8,
-       "y": 17.5,
-       "width": 18.2,
-       "height": 4.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184615_0002_D_12",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 53.5,
-       "y": 0.0,
-       "width": 3.7,
-       "height": 17.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184615_0002_D_13",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 79.8,
-       "y": 9.5,
-       "width": 13.7,
-       "height": 4.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184615_0002_D_14",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 13.0,
-       "y": 7.5,
-       "width": 10.5,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184615_0002_D_15",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 35.5,
-       "y": 0.0,
-       "width": 2.0,
-       "height": 29.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "4_DJI_20260807184615_0002_D_16",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 35.8,
-       "y": 29.0,
-       "width": 64.2,
-       "height": 3.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -3587,120 +3245,6 @@
       }
      },
      {
-      "id": "6_DJI_20260807144042_0002_D_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 46.5,
-       "y": 26.5,
-       "width": 22.0,
-       "height": 16.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "6_DJI_20260807144042_0002_D_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 14.0,
-       "y": 45.0,
-       "width": 11.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "6_DJI_20260807144042_0002_D_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 13.0,
-       "y": 80.0,
-       "width": 10.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "6_DJI_20260807144042_0002_D_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 47.5,
-       "y": 84.0,
-       "width": 24.0,
-       "height": 2.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "6_DJI_20260807144042_0002_D_12",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 70.5,
-       "y": 84.5,
-       "width": 1.5,
-       "height": 15.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "6_DJI_20260807144042_0002_D_13",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 16.5,
-       "y": 2.0,
-       "width": 38.5,
-       "height": 11.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "6_DJI_20260807144042_0002_D_view",
       "type": "choices",
       "from_name": "view",
@@ -3762,25 +3306,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "6_DJI_20260807144056_0003_D_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 58.5,
-       "y": 0.0,
-       "width": 33.5,
-       "height": 38.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
        ]
       }
      },
@@ -4763,82 +4288,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "building"
-       ]
-      }
-     },
-     {
-      "id": "7_DJI_20260807105725_0002_D_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 10.0,
-       "y": 64.5,
-       "width": 41.0,
-       "height": 17.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "7_DJI_20260807105725_0002_D_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 76.0,
-       "y": 28.5,
-       "width": 24.0,
-       "height": 2.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "7_DJI_20260807105725_0002_D_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 76.5,
-       "y": 28.5,
-       "width": 1.5,
-       "height": 51.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "7_DJI_20260807105725_0002_D_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 77.0,
-       "y": 78.5,
-       "width": 23.0,
-       "height": 2.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -6498,82 +5947,6 @@
       }
      },
      {
-      "id": "7_DJI_20260807113238_0001_D_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 53.0,
-       "y": 29.0,
-       "width": 40.0,
-       "height": 12.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
-      "id": "7_DJI_20260807113238_0001_D_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 21.5,
-       "width": 29.5,
-       "height": 2.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "7_DJI_20260807113238_0001_D_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 28.0,
-       "y": 22.0,
-       "width": 1.5,
-       "height": 48.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "7_DJI_20260807113238_0001_D_12",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 67.0,
-       "width": 29.5,
-       "height": 3.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "7_DJI_20260807113238_0001_D_view",
       "type": "choices",
       "from_name": "view",
@@ -6635,25 +6008,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "8_DJI_20260807111508_0001_D_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 42.0,
-       "y": 58.0,
-       "width": 35.0,
-       "height": 14.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
        ]
       }
      },
@@ -6723,25 +6077,6 @@
       }
      },
      {
-      "id": "8_DJI_20260807111510_0002_D_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 42.0,
-       "y": 58.0,
-       "width": 35.0,
-       "height": 14.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
-       ]
-      }
-     },
-     {
       "id": "8_DJI_20260807111510_0002_D_view",
       "type": "choices",
       "from_name": "view",
@@ -6803,25 +6138,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "8_DJI_20260807111524_0004_D_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 42.0,
-       "y": 58.0,
-       "width": 35.0,
-       "height": 14.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
        ]
       }
      },
@@ -7277,25 +6593,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "8_DJI_20260807112205_0011_D_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 43.5,
-       "y": 60.5,
-       "width": 29.5,
-       "height": 10.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "paving"
        ]
       }
      },
@@ -10699,63 +9996,6 @@
       }
      },
      {
-      "id": "11_DJI_20260807164815_0002_D_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 19.0,
-       "y": 14.0,
-       "width": 64.0,
-       "height": 4.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "11_DJI_20260807164815_0002_D_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 91.0,
-       "y": 15.0,
-       "width": 2.5,
-       "height": 67.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "11_DJI_20260807164815_0002_D_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 15.0,
-       "y": 91.0,
-       "width": 77.0,
-       "height": 3.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "11_DJI_20260807164815_0002_D_view",
       "type": "choices",
       "from_name": "view",
@@ -11822,63 +11062,6 @@
       }
      },
      {
-      "id": "12_DJI_20260807134713_0002_D_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 18.5,
-       "y": 61.0,
-       "width": 3.0,
-       "height": 19.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "12_DJI_20260807134713_0002_D_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 18.5,
-       "y": 79.0,
-       "width": 41.5,
-       "height": 2.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "12_DJI_20260807134713_0002_D_12",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 59.0,
-       "y": 67.0,
-       "width": 3.0,
-       "height": 13.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "12_DJI_20260807134713_0002_D_view",
       "type": "choices",
       "from_name": "view",
@@ -12264,44 +11447,6 @@
       }
      },
      {
-      "id": "12_DJI_20260807134926_0005_D_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 23.0,
-       "y": 34.0,
-       "width": 2.5,
-       "height": 56.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "12_DJI_20260807134926_0005_D_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 72.5,
-       "y": 47.0,
-       "width": 2.0,
-       "height": 37.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "12_DJI_20260807134926_0005_D_view",
       "type": "choices",
       "from_name": "view",
@@ -12515,44 +11660,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "12_DJI_20260807134928_0006_D_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 23.0,
-       "y": 34.0,
-       "width": 2.5,
-       "height": 56.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "12_DJI_20260807134928_0006_D_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 72.5,
-       "y": 47.0,
-       "width": 2.0,
-       "height": 37.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -13646,25 +12753,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "13_DJI_20260807132839_0002_D_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 5280,
-      "original_height": 3956,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 66.0,
-       "width": 33.0,
-       "height": 2.5,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -16950,25 +16038,6 @@
       }
      },
      {
-      "id": "house_100_001_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 9.0,
-       "width": 84.0,
-       "height": 27.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_100_001_view",
       "type": "choices",
       "from_name": "view",
@@ -17068,25 +16137,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "opening_empty"
-       ]
-      }
-     },
-     {
-      "id": "house_100_002_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 6.0,
-       "width": 61.0,
-       "height": 31.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -17247,25 +16297,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "window_installed"
-       ]
-      }
-     },
-     {
-      "id": "house_100_003_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 70.0,
-       "y": 0.0,
-       "width": 26.0,
-       "height": 100.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -17506,44 +16537,6 @@
       }
      },
      {
-      "id": "house_100_004_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 47.0,
-       "width": 30.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_100_004_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 63.0,
-       "y": 33.0,
-       "width": 37.0,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_100_004_view",
       "type": "choices",
       "from_name": "view",
@@ -17624,44 +16617,6 @@
        "rotation": 0,
        "choices": [
         "timber"
-       ]
-      }
-     },
-     {
-      "id": "house_100_005_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 60.0,
-       "y": 49.0,
-       "width": 40.0,
-       "height": 21.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_100_005_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 32.0,
-       "width": 37.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -17822,44 +16777,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "opening_empty"
-       ]
-      }
-     },
-     {
-      "id": "house_100_006_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 54.0,
-       "width": 37.0,
-       "height": 26.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_100_006_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 66.0,
-       "y": 13.0,
-       "width": 34.0,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -18039,44 +16956,6 @@
        "rotation": 0,
        "choices": [
         "hidden"
-       ]
-      }
-     },
-     {
-      "id": "house_100_007_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 4.0,
-       "y": 37.0,
-       "width": 29.0,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_100_007_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 27.0,
-       "width": 25.0,
-       "height": 17.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -18351,44 +17230,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "house_100_008_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 27.0,
-       "width": 37.0,
-       "height": 7.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_100_008_12",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 73.0,
-       "y": 45.0,
-       "width": 27.0,
-       "height": 28.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -19827,25 +18668,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 17.0,
-       "y": 1.0,
-       "width": 46.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_103_002_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 74.0,
        "y": 0.0,
        "width": 14.0,
@@ -19857,7 +18679,7 @@
       }
      },
      {
-      "id": "house_103_002_3",
+      "id": "house_103_002_2",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -19876,7 +18698,7 @@
       }
      },
      {
-      "id": "house_103_002_4",
+      "id": "house_103_002_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -20223,44 +19045,6 @@
       }
      },
      {
-      "id": "house_104_001_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 70.0,
-       "y": 32.0,
-       "width": 30.0,
-       "height": 40.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_104_001_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 15.0,
-       "y": 0.0,
-       "width": 25.0,
-       "height": 7.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_104_001_view",
       "type": "choices",
       "from_name": "view",
@@ -20467,25 +19251,6 @@
       }
      },
      {
-      "id": "house_104_003_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 6.0,
-       "width": 18.0,
-       "height": 21.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_104_003_view",
       "type": "choices",
       "from_name": "view",
@@ -20559,25 +19324,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 29.0,
-       "y": 9.0,
-       "width": 30.0,
-       "height": 18.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_104_004_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 84.0,
        "y": 3.0,
        "width": 16.0,
@@ -20589,7 +19335,7 @@
       }
      },
      {
-      "id": "house_104_004_2",
+      "id": "house_104_004_1",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -20749,25 +19495,6 @@
       }
      },
      {
-      "id": "house_104_005_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 0.0,
-       "width": 27.0,
-       "height": 59.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_104_005_view",
       "type": "choices",
       "from_name": "view",
@@ -20917,82 +19644,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 31.0,
-       "y": 21.0,
-       "width": 33.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_104_006_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 18.0,
-       "width": 46.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_104_006_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 66.0,
-       "width": 17.0,
-       "height": 32.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_104_006_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 69.0,
-       "y": 26.0,
-       "width": 31.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_104_006_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 27.0,
        "y": 2.0,
        "width": 9.0,
@@ -21004,7 +19655,7 @@
       }
      },
      {
-      "id": "house_104_006_9",
+      "id": "house_104_006_5",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -21023,7 +19674,7 @@
       }
      },
      {
-      "id": "house_104_006_10",
+      "id": "house_104_006_6",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -21042,7 +19693,7 @@
       }
      },
      {
-      "id": "house_104_006_11",
+      "id": "house_104_006_7",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -21061,7 +19712,7 @@
       }
      },
      {
-      "id": "house_104_006_11",
+      "id": "house_104_006_7",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -21080,7 +19731,7 @@
       }
      },
      {
-      "id": "house_104_006_12",
+      "id": "house_104_006_8",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -21312,25 +19963,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "house_104_007_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 28.0,
-       "y": 22.0,
-       "width": 27.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -21655,25 +20287,6 @@
       }
      },
      {
-      "id": "house_104_009_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 87.0,
-       "y": 52.0,
-       "width": 13.0,
-       "height": 33.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_104_009_view",
       "type": "choices",
       "from_name": "view",
@@ -21834,82 +20447,6 @@
       }
      },
      {
-      "id": "house_105_001_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 38.0,
-       "y": 40.0,
-       "width": 37.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_105_001_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 60.0,
-       "width": 13.0,
-       "height": 38.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_105_001_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 38.0,
-       "y": 50.0,
-       "width": 6.0,
-       "height": 48.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_105_001_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 72.0,
-       "y": 50.0,
-       "width": 28.0,
-       "height": 32.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_105_001_view",
       "type": "choices",
       "from_name": "view",
@@ -22032,44 +20569,6 @@
       }
      },
      {
-      "id": "house_105_002_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 12.0,
-       "y": 46.0,
-       "width": 88.0,
-       "height": 12.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_105_002_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 26.0,
-       "y": 66.0,
-       "width": 74.0,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_105_002_view",
       "type": "choices",
       "from_name": "view",
@@ -22112,25 +20611,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "house_106_001_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 80.0,
-       "y": 33.0,
-       "width": 20.0,
-       "height": 29.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -22265,25 +20745,6 @@
       }
      },
      {
-      "id": "house_106_003_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 3.0,
-       "y": 19.0,
-       "width": 46.0,
-       "height": 36.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_106_003_view",
       "type": "choices",
       "from_name": "view",
@@ -22345,44 +20806,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "house_106_004_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 66.0,
-       "y": 13.0,
-       "width": 34.0,
-       "height": 37.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_106_004_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 20.0,
-       "y": 33.0,
-       "width": 7.0,
-       "height": 67.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -22452,44 +20875,6 @@
       }
      },
      {
-      "id": "house_106_005_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 18.0,
-       "width": 100.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_106_005_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 4.0,
-       "y": 28.0,
-       "width": 14.0,
-       "height": 72.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_106_005_view",
       "type": "choices",
       "from_name": "view",
@@ -22551,44 +20936,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "house_106_006_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 77.0,
-       "y": 27.0,
-       "width": 23.0,
-       "height": 28.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_106_006_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 20.0,
-       "y": 26.0,
-       "width": 17.0,
-       "height": 32.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -23518,25 +21865,6 @@
       }
      },
      {
-      "id": "house_107_004_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1012,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 3.0,
-       "width": 27.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_107_004_view",
       "type": "choices",
       "from_name": "view",
@@ -23674,25 +22002,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "house_107_005_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1012,
-      "image_rotation": 0,
-      "value": {
-       "x": 72.0,
-       "y": 7.0,
-       "width": 28.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -24393,25 +22702,6 @@
        "rotation": 0,
        "choices": [
         "hidden"
-       ]
-      }
-     },
-     {
-      "id": "house_107_007_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1012,
-      "image_rotation": 0,
-      "value": {
-       "x": 21.0,
-       "y": 64.0,
-       "width": 16.0,
-       "height": 31.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -25695,25 +23985,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "opening_empty"
-       ]
-      }
-     },
-     {
-      "id": "house_108_006_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 64.0,
-       "y": 13.0,
-       "width": 36.0,
-       "height": 23.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -27058,25 +25329,6 @@
       }
      },
      {
-      "id": "house_110_003_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 34.0,
-       "width": 42.0,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_110_003_view",
       "type": "choices",
       "from_name": "view",
@@ -27625,25 +25877,6 @@
       }
      },
      {
-      "id": "house_110_005_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 74.0,
-       "y": 25.0,
-       "width": 26.0,
-       "height": 22.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_110_005_view",
       "type": "choices",
       "from_name": "view",
@@ -27880,25 +26113,6 @@
       }
      },
      {
-      "id": "house_110_006_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 78.0,
-       "y": 27.0,
-       "width": 22.0,
-       "height": 19.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_110_006_view",
       "type": "choices",
       "from_name": "view",
@@ -28017,25 +26231,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "window_installed"
-       ]
-      }
-     },
-     {
-      "id": "house_111_001_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 22.0,
-       "y": 62.0,
-       "width": 76.0,
-       "height": 38.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -28162,25 +26357,6 @@
       }
      },
      {
-      "id": "house_111_002_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 20.0,
-       "y": 48.0,
-       "width": 80.0,
-       "height": 52.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_111_002_view",
       "type": "choices",
       "from_name": "view",
@@ -28299,25 +26475,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "window_installed"
-       ]
-      }
-     },
-     {
-      "id": "house_111_003_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 52.0,
-       "width": 100.0,
-       "height": 30.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -28642,44 +26799,6 @@
       }
      },
      {
-      "id": "house_112_001_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 9.0,
-       "width": 56.0,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_112_001_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 37.0,
-       "width": 25.0,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_112_001_view",
       "type": "choices",
       "from_name": "view",
@@ -28893,25 +27012,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "house_112_002_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 20.0,
-       "width": 39.0,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -29262,44 +27362,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "house_112_003_13",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 17.0,
-       "y": 39.0,
-       "width": 22.0,
-       "height": 19.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_112_003_14",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 37.0,
-       "width": 25.0,
-       "height": 9.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -29711,63 +27773,6 @@
       }
      },
      {
-      "id": "house_112_004_19",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 26.0,
-       "y": 39.0,
-       "width": 38.0,
-       "height": 7.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_112_004_20",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 47.0,
-       "y": 67.0,
-       "width": 25.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_112_004_21",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 77.0,
-       "y": 37.0,
-       "width": 23.0,
-       "height": 40.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_112_004_view",
       "type": "choices",
       "from_name": "view",
@@ -29985,25 +27990,6 @@
       }
      },
      {
-      "id": "house_113_001_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 22.0,
-       "y": 33.0,
-       "width": 54.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_113_001_view",
       "type": "choices",
       "from_name": "view",
@@ -30046,25 +28032,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "foundation"
-       ]
-      }
-     },
-     {
-      "id": "house_113_002_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 2.0,
-       "width": 32.0,
-       "height": 68.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -30168,25 +28135,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "foundation"
-       ]
-      }
-     },
-     {
-      "id": "house_113_003_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 30.0,
-       "y": 0.0,
-       "width": 70.0,
-       "height": 66.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -30370,25 +28318,6 @@
       }
      },
      {
-      "id": "house_113_004_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 61.0,
-       "y": 0.0,
-       "width": 17.0,
-       "height": 100.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_113_004_view",
       "type": "choices",
       "from_name": "view",
@@ -30565,25 +28494,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 0.0,
-       "width": 100.0,
-       "height": 33.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_113_006_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 33.0,
        "y": 34.0,
        "width": 33.0,
@@ -30595,7 +28505,7 @@
       }
      },
      {
-      "id": "house_113_006_1",
+      "id": "house_113_006_0",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -30614,7 +28524,7 @@
       }
      },
      {
-      "id": "house_113_006_2",
+      "id": "house_113_006_1",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -30892,25 +28802,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "opening_empty"
-       ]
-      }
-     },
-     {
-      "id": "house_113_008_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 73.0,
-       "y": 2.0,
-       "width": 27.0,
-       "height": 62.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -31326,44 +29217,6 @@
        "rotation": 0,
        "choices": [
         "aerated_concrete"
-       ]
-      }
-     },
-     {
-      "id": "house_113_010_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 4.0,
-       "y": 0.0,
-       "width": 18.0,
-       "height": 49.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_113_010_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 60.0,
-       "y": 36.0,
-       "width": 40.0,
-       "height": 36.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -32694,25 +30547,6 @@
       }
      },
      {
-      "id": "house_115_001_20",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1280,
-      "original_height": 720,
-      "image_rotation": 0,
-      "value": {
-       "x": 63.0,
-       "y": 28.0,
-       "width": 37.0,
-       "height": 30.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_115_001_view",
       "type": "choices",
       "from_name": "view",
@@ -32987,25 +30821,6 @@
       }
      },
      {
-      "id": "house_115_002_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1280,
-      "original_height": 720,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 13.0,
-       "width": 20.0,
-       "height": 55.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_115_002_view",
       "type": "choices",
       "from_name": "view",
@@ -33238,44 +31053,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "door_installed"
-       ]
-      }
-     },
-     {
-      "id": "house_115_003_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1280,
-      "original_height": 720,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 30.0,
-       "width": 60.0,
-       "height": 28.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_115_003_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1280,
-      "original_height": 720,
-      "image_rotation": 0,
-      "value": {
-       "x": 57.0,
-       "y": 24.0,
-       "width": 43.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -33607,44 +31384,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "house_115_004_13",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1280,
-      "original_height": 720,
-      "image_rotation": 0,
-      "value": {
-       "x": 15.0,
-       "y": 30.0,
-       "width": 18.0,
-       "height": 9.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_115_004_14",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1280,
-      "original_height": 720,
-      "image_rotation": 0,
-      "value": {
-       "x": 59.0,
-       "y": 23.0,
-       "width": 41.0,
-       "height": 47.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -34152,25 +31891,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "house_116_004_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 22.0,
-       "y": 17.0,
-       "width": 7.0,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -36906,25 +34626,6 @@
       }
      },
      {
-      "id": "house_120_005_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 18.0,
-       "y": 17.0,
-       "width": 12.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_120_005_view",
       "type": "choices",
       "from_name": "view",
@@ -37214,44 +34915,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "house_120_006_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 60.0,
-       "y": 32.0,
-       "width": 40.0,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_120_006_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 37.0,
-       "width": 17.0,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -37678,44 +35341,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "foundation"
-       ]
-      }
-     },
-     {
-      "id": "house_121_001_16",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 18.0,
-       "y": 61.0,
-       "width": 9.0,
-       "height": 19.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_121_001_17",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 46.0,
-       "y": 46.0,
-       "width": 1.0,
-       "height": 12.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -38558,25 +36183,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 26.0,
-       "width": 57.0,
-       "height": 16.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_122_001_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 50.0,
        "y": 17.0,
        "width": 23.0,
@@ -38588,7 +36194,7 @@
       }
      },
      {
-      "id": "house_122_001_3",
+      "id": "house_122_001_2",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -38607,7 +36213,7 @@
       }
      },
      {
-      "id": "house_122_001_3",
+      "id": "house_122_001_2",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -38626,7 +36232,7 @@
       }
      },
      {
-      "id": "house_122_001_4",
+      "id": "house_122_001_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -38645,7 +36251,7 @@
       }
      },
      {
-      "id": "house_122_001_4",
+      "id": "house_122_001_3",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -38664,7 +36270,7 @@
       }
      },
      {
-      "id": "house_122_001_5",
+      "id": "house_122_001_4",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -38683,7 +36289,7 @@
       }
      },
      {
-      "id": "house_122_001_5",
+      "id": "house_122_001_4",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -38702,7 +36308,7 @@
       }
      },
      {
-      "id": "house_122_001_6",
+      "id": "house_122_001_5",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -38775,25 +36381,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 25.0,
-       "width": 58.0,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_122_002_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 49.0,
        "y": 15.0,
        "width": 24.0,
@@ -38805,7 +36392,7 @@
       }
      },
      {
-      "id": "house_122_002_3",
+      "id": "house_122_002_2",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -38824,7 +36411,7 @@
       }
      },
      {
-      "id": "house_122_002_3",
+      "id": "house_122_002_2",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -38843,7 +36430,7 @@
       }
      },
      {
-      "id": "house_122_002_4",
+      "id": "house_122_002_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -38862,7 +36449,7 @@
       }
      },
      {
-      "id": "house_122_002_4",
+      "id": "house_122_002_3",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -38935,25 +36522,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 23.0,
-       "width": 55.0,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_122_003_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 50.0,
        "y": 17.0,
        "width": 23.0,
@@ -38965,7 +36533,7 @@
       }
      },
      {
-      "id": "house_122_003_3",
+      "id": "house_122_003_2",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -38984,7 +36552,7 @@
       }
      },
      {
-      "id": "house_122_003_3",
+      "id": "house_122_003_2",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -39057,25 +36625,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 25.0,
-       "width": 58.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_122_004_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 50.0,
        "y": 16.0,
        "width": 23.0,
@@ -39087,7 +36636,7 @@
       }
      },
      {
-      "id": "house_122_004_3",
+      "id": "house_122_004_2",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -39106,7 +36655,7 @@
       }
      },
      {
-      "id": "house_122_004_3",
+      "id": "house_122_004_2",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -39217,25 +36766,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 24.0,
-       "width": 55.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_122_005_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 50.0,
        "y": 18.0,
        "width": 24.0,
@@ -39247,7 +36777,7 @@
       }
      },
      {
-      "id": "house_122_005_4",
+      "id": "house_122_005_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -39266,7 +36796,7 @@
       }
      },
      {
-      "id": "house_122_005_4",
+      "id": "house_122_005_3",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -39358,25 +36888,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 26.0,
-       "width": 55.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_122_006_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 50.0,
        "y": 17.0,
        "width": 24.0,
@@ -39388,7 +36899,7 @@
       }
      },
      {
-      "id": "house_122_006_3",
+      "id": "house_122_006_2",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -39407,7 +36918,7 @@
       }
      },
      {
-      "id": "house_122_006_3",
+      "id": "house_122_006_2",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -39601,25 +37112,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "opening_empty"
-       ]
-      }
-     },
-     {
-      "id": "house_122_007_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 33.0,
-       "width": 11.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -39868,25 +37360,6 @@
       }
      },
      {
-      "id": "house_122_010_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 31.0,
-       "width": 10.0,
-       "height": 16.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_122_010_view",
       "type": "choices",
       "from_name": "view",
@@ -39913,44 +37386,6 @@
   "annotations": [
    {
     "result": [
-     {
-      "id": "house_123_001_0",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 34.0,
-       "width": 69.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_001_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 67.0,
-       "y": 38.0,
-       "width": 33.0,
-       "height": 29.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
      {
       "id": "house_123_001_view",
       "type": "choices",
@@ -40074,63 +37509,6 @@
       }
      },
      {
-      "id": "house_123_002_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 3.0,
-       "y": 22.0,
-       "width": 19.0,
-       "height": 78.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_002_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 19.0,
-       "y": 16.0,
-       "width": 59.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_002_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 76.0,
-       "y": 15.0,
-       "width": 24.0,
-       "height": 45.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_123_002_view",
       "type": "choices",
       "from_name": "view",
@@ -40157,101 +37535,6 @@
   "annotations": [
    {
     "result": [
-     {
-      "id": "house_123_003_0",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 20.0,
-       "y": 0.0,
-       "width": 38.0,
-       "height": 57.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_003_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 18.0,
-       "y": 54.0,
-       "width": 19.0,
-       "height": 46.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_003_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 80.0,
-       "y": 0.0,
-       "width": 17.0,
-       "height": 37.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_003_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 49.0,
-       "y": 35.0,
-       "width": 48.0,
-       "height": 65.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_003_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 10.0,
-       "width": 21.0,
-       "height": 47.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
      {
       "id": "house_123_003_view",
       "type": "choices",
@@ -40281,82 +37564,6 @@
     "result": [
      {
       "id": "house_123_004_0",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 22.0,
-       "y": 0.0,
-       "width": 65.0,
-       "height": 4.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_004_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 85.0,
-       "y": 0.0,
-       "width": 15.0,
-       "height": 62.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_004_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 8.0,
-       "y": 58.0,
-       "width": 92.0,
-       "height": 6.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_004_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 3.0,
-       "y": 0.0,
-       "width": 21.0,
-       "height": 70.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_004_4",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -40402,63 +37609,6 @@
    {
     "result": [
      {
-      "id": "house_123_005_0",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 0.0,
-       "width": 31.0,
-       "height": 37.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_005_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 43.0,
-       "width": 73.0,
-       "height": 57.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_123_005_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 63.0,
-       "y": 0.0,
-       "width": 37.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_123_005_view",
       "type": "choices",
       "from_name": "view",
@@ -40486,25 +37636,6 @@
    {
     "result": [
      {
-      "id": "house_123_006_0",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 0.0,
-       "width": 3.0,
-       "height": 100.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "house_123_006_view",
       "type": "choices",
       "from_name": "view",
@@ -40531,63 +37662,6 @@
   "annotations": [
    {
     "result": [
-     {
-      "id": "house_124_001_0",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 17.0,
-       "y": 57.0,
-       "width": 22.0,
-       "height": 19.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_124_001_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 37.0,
-       "y": 49.0,
-       "width": 18.0,
-       "height": 23.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_124_001_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 54.0,
-       "y": 37.0,
-       "width": 15.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
      {
       "id": "house_124_001_view",
       "type": "choices",
@@ -40631,25 +37705,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "house_124_002_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 3.0,
-       "y": 61.0,
-       "width": 15.0,
-       "height": 3.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -40772,25 +37827,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "house_124_003_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 32.0,
-       "y": 80.0,
-       "width": 15.0,
-       "height": 7.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -40964,63 +38000,6 @@
      },
      {
       "id": "house_124_005_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 20.0,
-       "y": 28.0,
-       "width": 18.0,
-       "height": 17.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_124_005_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 33.0,
-       "y": 22.0,
-       "width": 19.0,
-       "height": 16.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_124_005_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 40.0,
-       "y": 10.0,
-       "width": 17.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "house_124_005_7",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -41428,25 +38407,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "building"
-       ]
-      }
-     },
-     {
-      "id": "house_125_003_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1920,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 44.0,
-       "y": 82.0,
-       "width": 48.0,
-       "height": 16.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -42072,63 +39032,6 @@
       }
      },
      {
-      "id": "ijs_001_object_001_0001_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 10.0,
-       "width": 30.0,
-       "height": 17.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_001_object_001_0001_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 50.0,
-       "y": 18.0,
-       "width": 25.0,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_001_object_001_0001_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 28.0,
-       "width": 25.0,
-       "height": 22.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_001_object_001_0001_view",
       "type": "choices",
       "from_name": "view",
@@ -42532,63 +39435,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "ijs_001_object_001_0002_16",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 16.0,
-       "width": 35.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_001_object_001_0002_17",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 35.0,
-       "y": 20.0,
-       "width": 33.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_001_object_001_0002_18",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 37.0,
-       "width": 25.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -43043,25 +39889,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.2149,
-       "y": 16.0489,
-       "width": 36.6225,
-       "height": 6.2372,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_002_object_002_0005_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 22.0,
        "y": 33.0,
        "width": 58.0,
@@ -43073,7 +39900,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_1",
+      "id": "ijs_002_object_002_0005_0",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -43092,7 +39919,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_2",
+      "id": "ijs_002_object_002_0005_1",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43111,7 +39938,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_3",
+      "id": "ijs_002_object_002_0005_2",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43130,7 +39957,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_4",
+      "id": "ijs_002_object_002_0005_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43149,7 +39976,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_5",
+      "id": "ijs_002_object_002_0005_4",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43168,7 +39995,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_6",
+      "id": "ijs_002_object_002_0005_5",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43187,7 +40014,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_7",
+      "id": "ijs_002_object_002_0005_6",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43206,7 +40033,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_8",
+      "id": "ijs_002_object_002_0005_7",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43225,7 +40052,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_9",
+      "id": "ijs_002_object_002_0005_8",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43244,7 +40071,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_10",
+      "id": "ijs_002_object_002_0005_9",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43263,7 +40090,7 @@
       }
      },
      {
-      "id": "ijs_002_object_002_0005_11",
+      "id": "ijs_002_object_002_0005_10",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -43278,25 +40105,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "opening_empty"
-       ]
-      }
-     },
-     {
-      "id": "ijs_002_object_002_0005_12",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 77.0,
-       "y": 30.0,
-       "width": 23.0,
-       "height": 20.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -43697,25 +40505,6 @@
       }
      },
      {
-      "id": "ijs_003_object_003_0007_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 82.0,
-       "y": 39.0,
-       "width": 18.0,
-       "height": 6.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_003_object_003_0007_view",
       "type": "choices",
       "from_name": "view",
@@ -43968,25 +40757,6 @@
       "original_height": 900,
       "image_rotation": 0,
       "value": {
-       "x": 28.6474,
-       "y": 62.3909,
-       "width": 23.466,
-       "height": 32.7905,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_004_object_004_0009_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
        "x": 43.0,
        "y": 53.0,
        "width": 15.0,
@@ -43998,7 +40768,7 @@
       }
      },
      {
-      "id": "ijs_004_object_004_0009_4",
+      "id": "ijs_004_object_004_0009_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -44017,7 +40787,7 @@
       }
      },
      {
-      "id": "ijs_004_object_004_0009_5",
+      "id": "ijs_004_object_004_0009_4",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -44036,7 +40806,7 @@
       }
      },
      {
-      "id": "ijs_004_object_004_0009_6",
+      "id": "ijs_004_object_004_0009_5",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -44051,25 +40821,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "ijs_004_object_004_0009_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 53.0,
-       "width": 33.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -44249,63 +41000,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "ijs_004_object_004_0010_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 5.0,
-       "y": 69.0,
-       "width": 55.0,
-       "height": 11.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_004_object_004_0010_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 59.0,
-       "y": 49.0,
-       "width": 13.0,
-       "height": 23.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_004_object_004_0010_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 25.0,
-       "y": 48.0,
-       "width": 47.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -44679,44 +41373,6 @@
       }
      },
      {
-      "id": "ijs_004_object_004_0011_15",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 81.0,
-       "y": 44.0,
-       "width": 11.0,
-       "height": 53.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_004_object_004_0011_16",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 22.0,
-       "y": 43.0,
-       "width": 62.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_004_object_004_0011_view",
       "type": "choices",
       "from_name": "view",
@@ -45049,25 +41705,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "ijs_006_object_006_0015_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 8.0,
-       "width": 51.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -46194,44 +42831,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "window_installed"
-       ]
-      }
-     },
-     {
-      "id": "ijs_007_object_007_0018_20",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 40.0,
-       "width": 27.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_007_object_007_0018_21",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 90.0,
-       "y": 45.0,
-       "width": 10.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -47516,25 +44115,6 @@
       }
      },
      {
-      "id": "ijs_012_object_012_0026_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 73.0,
-       "y": 49.0,
-       "width": 27.0,
-       "height": 14.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_012_object_012_0026_view",
       "type": "choices",
       "from_name": "view",
@@ -47672,44 +44252,6 @@
        "rotation": 0,
        "choices": [
         "timber"
-       ]
-      }
-     },
-     {
-      "id": "ijs_012_object_012_0027_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 30.0,
-       "y": 0.0,
-       "width": 25.0,
-       "height": 7.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_012_object_012_0027_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 6.0,
-       "width": 25.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -47912,25 +44454,6 @@
       }
      },
      {
-      "id": "ijs_012_object_012_0028_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 44.0,
-       "width": 30.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_012_object_012_0028_view",
       "type": "choices",
       "from_name": "view",
@@ -48049,25 +44572,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "ijs_013_object_013_0029_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 5.0,
-       "width": 14.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -48323,44 +44827,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "opening_empty"
-       ]
-      }
-     },
-     {
-      "id": "ijs_013_object_013_0030_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 39.0,
-       "width": 22.0,
-       "height": 9.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_013_object_013_0030_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 9.0,
-       "y": 30.0,
-       "width": 21.0,
-       "height": 5.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -48711,44 +45177,6 @@
        "rotation": 0,
        "choices": [
         "aerated_concrete"
-       ]
-      }
-     },
-     {
-      "id": "ijs_013_object_013_0031_14",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 34.0,
-       "width": 20.0,
-       "height": 9.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_013_object_013_0031_15",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 9.0,
-       "y": 26.0,
-       "width": 21.0,
-       "height": 6.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -49735,25 +46163,6 @@
       }
      },
      {
-      "id": "ijs_015_object_015_0035_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 2.0,
-       "width": 48.0,
-       "height": 13.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_015_object_015_0035_view",
       "type": "choices",
       "from_name": "view",
@@ -50637,44 +47046,6 @@
        "rotation": 0,
        "choices": [
         "hidden"
-       ]
-      }
-     },
-     {
-      "id": "ijs_017_object_017_0040_17",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 70.0,
-       "y": 33.0,
-       "width": 30.0,
-       "height": 17.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_017_object_017_0040_18",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 70.0,
-       "y": 7.0,
-       "width": 30.0,
-       "height": 6.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -51794,44 +48165,6 @@
       }
      },
      {
-      "id": "ijs_018_object_018_0044_11",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 26.0,
-       "width": 20.0,
-       "height": 7.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_018_object_018_0044_12",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 86.0,
-       "y": 17.0,
-       "width": 14.0,
-       "height": 5.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_018_object_018_0044_view",
       "type": "choices",
       "from_name": "view",
@@ -52544,63 +48877,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "ijs_020_object_020_0048_8",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 54.0,
-       "width": 30.0,
-       "height": 21.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_020_object_020_0048_9",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 30.0,
-       "y": 70.0,
-       "width": 30.0,
-       "height": 30.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_020_object_020_0048_10",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 60.0,
-       "y": 52.0,
-       "width": 37.0,
-       "height": 48.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -54981,25 +51257,6 @@
       }
      },
      {
-      "id": "ijs_024_object_024_0060_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 33.0,
-       "y": 33.0,
-       "width": 47.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_024_object_024_0060_view",
       "type": "choices",
       "from_name": "view",
@@ -55526,25 +51783,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 52.7091,
-       "width": 25.4036,
-       "height": 12.4743,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_025_object_025_0063_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 47.0,
        "y": 54.0,
        "width": 41.0,
@@ -55556,7 +51794,7 @@
       }
      },
      {
-      "id": "ijs_025_object_025_0063_5",
+      "id": "ijs_025_object_025_0063_4",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -55571,25 +51809,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "ijs_025_object_025_0063_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 78.0,
-       "width": 25.0,
-       "height": 22.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -55622,25 +51841,6 @@
     "result": [
      {
       "id": "ijs_025_object_025_0064_0",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 43.2017,
-       "width": 12.269,
-       "height": 18.7073,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_025_object_025_0064_1",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -55853,44 +52053,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "ijs_025_object_025_0065_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 9.0,
-       "y": 66.0,
-       "width": 29.0,
-       "height": 34.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_025_object_025_0065_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 40.0,
-       "y": 70.0,
-       "width": 60.0,
-       "height": 12.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -56763,44 +52925,6 @@
       }
      },
      {
-      "id": "ijs_028_object_028_0069_13",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1621,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 76.0,
-       "y": 28.0,
-       "width": 24.0,
-       "height": 19.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_028_object_028_0069_14",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1621,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 84.0,
-       "y": 55.0,
-       "width": 16.0,
-       "height": 45.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_028_object_028_0069_view",
       "type": "choices",
       "from_name": "view",
@@ -57151,25 +53275,6 @@
       }
      },
      {
-      "id": "ijs_028_object_028_0070_14",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1621,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 55.0,
-       "width": 25.0,
-       "height": 23.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_028_object_028_0070_view",
       "type": "choices",
       "from_name": "view",
@@ -57478,44 +53583,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "window_installed"
-       ]
-      }
-     },
-     {
-      "id": "ijs_029_object_029_0071_13",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 48.0,
-       "y": 75.0,
-       "width": 27.0,
-       "height": 25.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_029_object_029_0071_14",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 75.0,
-       "y": 55.0,
-       "width": 25.0,
-       "height": 25.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -61048,13 +57115,32 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 32.0,
-       "y": 23.0,
-       "width": 58.0,
-       "height": 8.0,
+       "x": 0.0,
+       "y": 17.0,
+       "width": 18.0,
+       "height": 15.0,
        "rotation": 0,
        "rectanglelabels": [
-        "fence"
+        "walls_full"
+       ]
+      }
+     },
+     {
+      "id": "ijs_039_object_039_0093_1",
+      "type": "choices",
+      "from_name": "material",
+      "to_name": "image",
+      "original_width": 1728,
+      "original_height": 1080,
+      "image_rotation": 0,
+      "value": {
+       "x": 0.0,
+       "y": 17.0,
+       "width": 18.0,
+       "height": 15.0,
+       "rotation": 0,
+       "choices": [
+        "hidden"
        ]
       }
      },
@@ -61073,26 +57159,7 @@
        "height": 15.0,
        "rotation": 0,
        "rectanglelabels": [
-        "walls_full"
-       ]
-      }
-     },
-     {
-      "id": "ijs_039_object_039_0093_2",
-      "type": "choices",
-      "from_name": "material",
-      "to_name": "image",
-      "original_width": 1728,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 17.0,
-       "width": 18.0,
-       "height": 15.0,
-       "rotation": 0,
-       "choices": [
-        "hidden"
+        "facade_finish"
        ]
       }
      },
@@ -61105,13 +57172,32 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 17.0,
-       "width": 18.0,
-       "height": 15.0,
+       "x": 66.0,
+       "y": 19.0,
+       "width": 14.0,
+       "height": 10.0,
        "rotation": 0,
        "rectanglelabels": [
-        "facade_finish"
+        "walls_full"
+       ]
+      }
+     },
+     {
+      "id": "ijs_039_object_039_0093_3",
+      "type": "choices",
+      "from_name": "material",
+      "to_name": "image",
+      "original_width": 1728,
+      "original_height": 1080,
+      "image_rotation": 0,
+      "value": {
+       "x": 66.0,
+       "y": 19.0,
+       "width": 14.0,
+       "height": 10.0,
+       "rotation": 0,
+       "choices": [
+        "hidden"
        ]
       }
      },
@@ -61130,26 +57216,7 @@
        "height": 10.0,
        "rotation": 0,
        "rectanglelabels": [
-        "walls_full"
-       ]
-      }
-     },
-     {
-      "id": "ijs_039_object_039_0093_4",
-      "type": "choices",
-      "from_name": "material",
-      "to_name": "image",
-      "original_width": 1728,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 66.0,
-       "y": 19.0,
-       "width": 14.0,
-       "height": 10.0,
-       "rotation": 0,
-       "choices": [
-        "hidden"
+        "facade_finish"
        ]
       }
      },
@@ -61162,25 +57229,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 66.0,
-       "y": 19.0,
-       "width": 14.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "ijs_039_object_039_0093_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1728,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 85.0,
        "y": 19.0,
        "width": 13.0,
@@ -61192,7 +57240,7 @@
       }
      },
      {
-      "id": "ijs_039_object_039_0093_6",
+      "id": "ijs_039_object_039_0093_5",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -61211,7 +57259,7 @@
       }
      },
      {
-      "id": "ijs_039_object_039_0093_7",
+      "id": "ijs_039_object_039_0093_6",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -61683,25 +57731,6 @@
       }
      },
      {
-      "id": "ijs_040_object_040_0095_16",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 61.0,
-       "width": 30.0,
-       "height": 9.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_040_object_040_0095_view",
       "type": "choices",
       "from_name": "view",
@@ -62014,25 +58043,6 @@
       }
      },
      {
-      "id": "ijs_040_object_040_0096_13",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 15.0,
-       "y": 46.0,
-       "width": 21.0,
-       "height": 7.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_040_object_040_0096_view",
       "type": "choices",
       "from_name": "view",
@@ -62068,25 +58078,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 26.2762,
-       "y": 65.2505,
-       "width": 73.6714,
-       "height": 34.7495,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_041_object_041_0097_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 0.4175,
        "y": 31.3657,
        "width": 18.8599,
@@ -62098,7 +58089,7 @@
       }
      },
      {
-      "id": "ijs_041_object_041_0097_1",
+      "id": "ijs_041_object_041_0097_0",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -62117,7 +58108,7 @@
       }
      },
      {
-      "id": "ijs_041_object_041_0097_2",
+      "id": "ijs_041_object_041_0097_1",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -62136,7 +58127,7 @@
       }
      },
      {
-      "id": "ijs_041_object_041_0097_3",
+      "id": "ijs_041_object_041_0097_2",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -62155,7 +58146,7 @@
       }
      },
      {
-      "id": "ijs_041_object_041_0097_4",
+      "id": "ijs_041_object_041_0097_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -62174,7 +58165,7 @@
       }
      },
      {
-      "id": "ijs_041_object_041_0097_4",
+      "id": "ijs_041_object_041_0097_3",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -62193,7 +58184,7 @@
       }
      },
      {
-      "id": "ijs_041_object_041_0097_5",
+      "id": "ijs_041_object_041_0097_4",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -62212,7 +58203,7 @@
       }
      },
      {
-      "id": "ijs_041_object_041_0097_6",
+      "id": "ijs_041_object_041_0097_5",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -62231,7 +58222,7 @@
       }
      },
      {
-      "id": "ijs_041_object_041_0097_7",
+      "id": "ijs_041_object_041_0097_6",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -62822,25 +58813,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 1.574,
-       "y": 88.1693,
-       "width": 97.6631,
-       "height": 6.0139,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_043_object_043_0101_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 608,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 15.0,
        "y": 40.0,
        "width": 57.0,
@@ -63142,25 +59114,6 @@
       }
      },
      {
-      "id": "ijs_044_object_044_0104_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 5.0,
-       "y": 52.0,
-       "width": 40.0,
-       "height": 44.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_044_object_044_0104_view",
       "type": "choices",
       "from_name": "view",
@@ -63245,44 +59198,6 @@
       }
      },
      {
-      "id": "ijs_044_object_044_0105_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 70.0,
-       "width": 76.0,
-       "height": 16.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_044_object_044_0105_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 58.0,
-       "width": 35.0,
-       "height": 4.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_044_object_044_0105_view",
       "type": "choices",
       "from_name": "view",
@@ -63363,25 +59278,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "ijs_044_object_044_0106_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 66.0,
-       "y": 53.0,
-       "width": 34.0,
-       "height": 10.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -64449,25 +60345,6 @@
       }
      },
      {
-      "id": "ijs_047_object_047_0113_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1440,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 18.0,
-       "width": 70.0,
-       "height": 16.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_047_object_047_0113_view",
       "type": "choices",
       "from_name": "view",
@@ -64643,25 +60520,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "facade_finish"
-       ]
-      }
-     },
-     {
-      "id": "ijs_048_object_048_0114_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 22.0,
-       "y": 62.0,
-       "width": 26.0,
-       "height": 16.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -65199,25 +61057,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "foundation"
-       ]
-      }
-     },
-     {
-      "id": "ijs_049_object_049_0117_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 5.8188,
-       "y": 8.3695,
-       "width": 6.6849,
-       "height": 91.2209,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -65900,25 +61739,6 @@
       }
      },
      {
-      "id": "ijs_050_object_050_0121_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 17.0,
-       "y": 54.0,
-       "width": 45.0,
-       "height": 22.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_050_object_050_0121_view",
       "type": "choices",
       "from_name": "view",
@@ -66125,25 +61945,6 @@
       }
      },
      {
-      "id": "ijs_051_object_051_0123_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 40.0,
-       "width": 25.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_051_object_051_0123_view",
       "type": "choices",
       "from_name": "view",
@@ -66320,25 +62121,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 60.0,
-       "y": 55.0,
-       "width": 40.0,
-       "height": 40.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_051_object_051_0125_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 33.0,
        "y": 48.0,
        "width": 3.0,
@@ -66350,7 +62132,7 @@
       }
      },
      {
-      "id": "ijs_051_object_051_0125_5",
+      "id": "ijs_051_object_051_0125_4",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -67936,25 +63718,6 @@
       "original_height": 1066,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 25.0,
-       "width": 85.0,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_056_object_056_0137_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
        "x": 30.0,
        "y": 15.0,
        "width": 15.0,
@@ -67966,7 +63729,7 @@
       }
      },
      {
-      "id": "ijs_056_object_056_0137_2",
+      "id": "ijs_056_object_056_0137_1",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -68046,44 +63809,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "foundation"
-       ]
-      }
-     },
-     {
-      "id": "ijs_056_object_056_0138_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 10.0,
-       "y": 0.0,
-       "width": 5.0,
-       "height": 100.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_056_object_056_0138_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 92.0,
-       "y": 0.0,
-       "width": 6.0,
-       "height": 85.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -69242,25 +64967,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "foundation"
-       ]
-      }
-     },
-     {
-      "id": "ijs_059_object_059_0145_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 15.0,
-       "y": 0.0,
-       "width": 85.0,
-       "height": 12.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -71296,25 +67002,6 @@
       }
      },
      {
-      "id": "ijs_065_object_065_0159_4",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 20.0,
-       "y": 25.0,
-       "width": 80.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_065_object_065_0159_view",
       "type": "choices",
       "from_name": "view",
@@ -71887,25 +67574,6 @@
       }
      },
      {
-      "id": "ijs_068_object_068_0164_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 32.0,
-       "width": 100.0,
-       "height": 6.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_068_object_068_0164_view",
       "type": "choices",
       "from_name": "view",
@@ -71986,25 +67654,6 @@
        "rotation": 0,
        "choices": [
         "hidden"
-       ]
-      }
-     },
-     {
-      "id": "ijs_068_object_068_0165_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1621,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 15.0,
-       "y": 0.0,
-       "width": 85.0,
-       "height": 15.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -73034,25 +68683,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 96.0352,
-       "y": 42.0247,
-       "width": 3.9285,
-       "height": 55.5206,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_071_object_071_0171_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 10.0,
        "y": 41.0,
        "width": 72.0,
@@ -73060,25 +68690,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "foundation"
-       ]
-      }
-     },
-     {
-      "id": "ijs_071_object_071_0171_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 35.0,
-       "width": 100.0,
-       "height": 17.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -74039,25 +69650,6 @@
        "rotation": 0,
        "choices": [
         "hidden"
-       ]
-      }
-     },
-     {
-      "id": "ijs_073_object_073_0177_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 28.3895,
-       "width": 21.411,
-       "height": 13.7961,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -75537,25 +71129,6 @@
       }
      },
      {
-      "id": "ijs_078_object_078_0189_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 30.0,
-       "y": 30.0,
-       "width": 70.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_078_object_078_0189_view",
       "type": "choices",
       "from_name": "view",
@@ -75598,25 +71171,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "ijs_078_object_078_0190_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 28.0,
-       "width": 50.0,
-       "height": 22.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -77397,25 +72951,6 @@
       "original_height": 1080,
       "image_rotation": 0,
       "value": {
-       "x": 0.0,
-       "y": 0.0,
-       "width": 68.0,
-       "height": 55.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_084_object_084_0202_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
        "x": 20.0,
        "y": 15.0,
        "width": 68.0,
@@ -77427,7 +72962,7 @@
       }
      },
      {
-      "id": "ijs_084_object_084_0202_2",
+      "id": "ijs_084_object_084_0202_1",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -77446,7 +72981,7 @@
       }
      },
      {
-      "id": "ijs_084_object_084_0202_2",
+      "id": "ijs_084_object_084_0202_1",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -79767,44 +75302,6 @@
       "original_height": 900,
       "image_rotation": 0,
       "value": {
-       "x": 18.0146,
-       "y": 0.9292,
-       "width": 5.0234,
-       "height": 94.7685,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_091_object_091_0218_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 49.0656,
-       "y": 92.528,
-       "width": 50.9343,
-       "height": 7.472,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_091_object_091_0218_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
        "x": 28.0,
        "y": 18.0,
        "width": 46.0,
@@ -80011,25 +75508,6 @@
       "original_height": 900,
       "image_rotation": 0,
       "value": {
-       "x": 72.4548,
-       "y": 40.7555,
-       "width": 22.1377,
-       "height": 59.1016,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_091_object_091_0220_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
        "x": 5.0,
        "y": 36.0,
        "width": 65.0,
@@ -80041,7 +75519,7 @@
       }
      },
      {
-      "id": "ijs_091_object_091_0220_2",
+      "id": "ijs_091_object_091_0220_1",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -80060,7 +75538,7 @@
       }
      },
      {
-      "id": "ijs_091_object_091_0220_2",
+      "id": "ijs_091_object_091_0220_1",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -80738,25 +76216,6 @@
       }
      },
      {
-      "id": "ijs_093_object_093_0224_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 28.0,
-       "y": 36.0,
-       "width": 42.0,
-       "height": 8.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_093_object_093_0224_view",
       "type": "choices",
       "from_name": "view",
@@ -81215,25 +76674,6 @@
       "original_height": 900,
       "image_rotation": 0,
       "value": {
-       "x": 34.0,
-       "y": 51.0,
-       "width": 51.0,
-       "height": 49.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_094_object_094_0228_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
        "x": 64.4597,
        "y": 35.0071,
        "width": 27.0034,
@@ -81245,7 +76685,7 @@
       }
      },
      {
-      "id": "ijs_094_object_094_0228_3",
+      "id": "ijs_094_object_094_0228_2",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -81264,7 +76704,7 @@
       }
      },
      {
-      "id": "ijs_094_object_094_0228_4",
+      "id": "ijs_094_object_094_0228_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -81283,7 +76723,7 @@
       }
      },
      {
-      "id": "ijs_094_object_094_0228_5",
+      "id": "ijs_094_object_094_0228_4",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -81302,7 +76742,7 @@
       }
      },
      {
-      "id": "ijs_094_object_094_0228_6",
+      "id": "ijs_094_object_094_0228_5",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -81508,25 +76948,6 @@
       "original_height": 900,
       "image_rotation": 0,
       "value": {
-       "x": 80.3153,
-       "y": 48.8396,
-       "width": 19.6523,
-       "height": 12.8547,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_094_object_094_0229_7",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
        "x": 41.0,
        "y": 50.0,
        "width": 3.0,
@@ -81580,25 +77001,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "foundation"
-       ]
-      }
-     },
-     {
-      "id": "ijs_095_object_095_0230_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1621,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 20.0,
-       "y": 21.0,
-       "width": 80.0,
-       "height": 9.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -83691,25 +79093,6 @@
       "original_height": 1066,
       "image_rotation": 0,
       "value": {
-       "x": 16.8994,
-       "y": 86.737,
-       "width": 63.0029,
-       "height": 6.0213,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_100_object_100_0243_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
        "x": 15.0,
        "y": 10.0,
        "width": 80.0,
@@ -83801,25 +79184,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "foundation"
-       ]
-      }
-     },
-     {
-      "id": "ijs_101_object_101_0244_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 18.0,
-       "y": 0.0,
-       "width": 68.0,
-       "height": 30.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -84962,25 +80326,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "site_prep"
-       ]
-      }
-     },
-     {
-      "id": "ijs_103_object_103_0249_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 0.0,
-       "y": 46.0,
-       "width": 100.0,
-       "height": 9.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -86164,25 +81509,6 @@
       "original_height": 900,
       "image_rotation": 0,
       "value": {
-       "x": 0.4906,
-       "y": 11.6538,
-       "width": 50.6308,
-       "height": 20.0861,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_106_object_106_0260_5",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
        "x": 0.0,
        "y": 0.0,
        "width": 18.0,
@@ -86194,7 +81520,7 @@
       }
      },
      {
-      "id": "ijs_106_object_106_0260_5",
+      "id": "ijs_106_object_106_0260_4",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -88805,25 +84131,6 @@
       "original_height": 900,
       "image_rotation": 0,
       "value": {
-       "x": 83.3254,
-       "y": 39.0074,
-       "width": 16.6746,
-       "height": 3.9103,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_113_object_113_0279_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
        "x": 25.0,
        "y": 40.0,
        "width": 45.0,
@@ -88835,7 +84142,7 @@
       }
      },
      {
-      "id": "ijs_113_object_113_0279_1",
+      "id": "ijs_113_object_113_0279_0",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -88854,7 +84161,7 @@
       }
      },
      {
-      "id": "ijs_113_object_113_0279_2",
+      "id": "ijs_113_object_113_0279_1",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -88873,7 +84180,7 @@
       }
      },
      {
-      "id": "ijs_113_object_113_0279_3",
+      "id": "ijs_113_object_113_0279_2",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -88892,7 +84199,7 @@
       }
      },
      {
-      "id": "ijs_113_object_113_0279_4",
+      "id": "ijs_113_object_113_0279_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -90687,25 +85994,6 @@
       }
      },
      {
-      "id": "ijs_118_object_118_0292_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1441,
-      "original_height": 1080,
-      "image_rotation": 0,
-      "value": {
-       "x": 15.0,
-       "y": 66.0,
-       "width": 85.0,
-       "height": 34.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_118_object_118_0292_view",
       "type": "choices",
       "from_name": "view",
@@ -92072,25 +87360,6 @@
       }
      },
      {
-      "id": "ijs_124_object_124_0306_1",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 25.0,
-       "y": 33.0,
-       "width": 53.0,
-       "height": 12.0,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
       "id": "ijs_124_object_124_0306_view",
       "type": "choices",
       "from_name": "view",
@@ -92259,25 +87528,6 @@
       "original_height": 1066,
       "image_rotation": 0,
       "value": {
-       "x": 87.7861,
-       "y": 48.4994,
-       "width": 12.2139,
-       "height": 22.1733,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_124_object_124_0307_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 1066,
-      "image_rotation": 0,
-      "value": {
        "x": 62.0,
        "y": 6.0,
        "width": 18.0,
@@ -92289,7 +87539,7 @@
       }
      },
      {
-      "id": "ijs_124_object_124_0307_6",
+      "id": "ijs_124_object_124_0307_5",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -94072,25 +89322,6 @@
       "original_height": 900,
       "image_rotation": 0,
       "value": {
-       "x": 53.2626,
-       "y": 62.793,
-       "width": 46.7374,
-       "height": 12.317,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_131_object_131_0327_3",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
        "x": 14.8266,
        "y": 57.9089,
        "width": 27.3058,
@@ -94102,7 +89333,7 @@
       }
      },
      {
-      "id": "ijs_131_object_131_0327_3",
+      "id": "ijs_131_object_131_0327_2",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -94121,7 +89352,7 @@
       }
      },
      {
-      "id": "ijs_131_object_131_0327_4",
+      "id": "ijs_131_object_131_0327_3",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -94140,7 +89371,7 @@
       }
      },
      {
-      "id": "ijs_131_object_131_0327_4",
+      "id": "ijs_131_object_131_0327_3",
       "type": "choices",
       "from_name": "material",
       "to_name": "image",
@@ -95581,25 +90812,6 @@
        "rotation": 0,
        "rectanglelabels": [
         "roof_covered"
-       ]
-      }
-     },
-     {
-      "id": "ijs_136_object_136_0339_2",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
-       "x": 62.9721,
-       "y": 52.212,
-       "width": 36.246,
-       "height": 10.3027,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
        ]
       }
      },
@@ -97846,25 +93058,6 @@
       "original_height": 900,
       "image_rotation": 0,
       "value": {
-       "x": 0.0448,
-       "y": 55.5543,
-       "width": 38.1947,
-       "height": 24.7287,
-       "rotation": 0,
-       "rectanglelabels": [
-        "fence"
-       ]
-      }
-     },
-     {
-      "id": "ijs_143_object_143_0357_6",
-      "type": "rectanglelabels",
-      "from_name": "label",
-      "to_name": "image",
-      "original_width": 1600,
-      "original_height": 900,
-      "image_rotation": 0,
-      "value": {
        "x": 31.0284,
        "y": 51.8727,
        "width": 2.6209,
@@ -97876,7 +93069,7 @@
       }
      },
      {
-      "id": "ijs_143_object_143_0357_7",
+      "id": "ijs_143_object_143_0357_6",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -97895,7 +93088,7 @@
       }
      },
      {
-      "id": "ijs_143_object_143_0357_8",
+      "id": "ijs_143_object_143_0357_7",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -97914,7 +93107,7 @@
       }
      },
      {
-      "id": "ijs_143_object_143_0357_9",
+      "id": "ijs_143_object_143_0357_8",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -97933,7 +93126,7 @@
       }
      },
      {
-      "id": "ijs_143_object_143_0357_10",
+      "id": "ijs_143_object_143_0357_9",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",
@@ -97952,7 +93145,7 @@
       }
      },
      {
-      "id": "ijs_143_object_143_0357_11",
+      "id": "ijs_143_object_143_0357_10",
       "type": "rectanglelabels",
       "from_name": "label",
       "to_name": "image",

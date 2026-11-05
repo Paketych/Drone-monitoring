@@ -188,7 +188,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 for item in classes.classes
             ],
             "stages": [{**item.model_dump(), "order": i} for i, item in enumerate(stages.stages)],
-            "bank_readiness": [item.model_dump() for item in stages.bank_readiness],
+            "readiness_levels": [item.model_dump() for item in stages.readiness_levels],
             "reshoot_reasons": [
                 {"id": key, "label": label} for key, label in stages.reshoot_reasons.items()
             ],
@@ -518,7 +518,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
                 raise ServiceError(
                     409, "STAGE_NOT_DETERMINED", "Нет результата модели, который можно принять"
                 )
-            values = {key: result[key] for key in ("stage", "readiness_pct", "bank_readiness")}
+            values = {key: result[key] for key in ("stage", "readiness_pct", "readiness_level")}
         value = database.add_readiness_review(
             flight_id,
             {

@@ -166,7 +166,7 @@ try {
   await page.getByRole("button", { name: "Исправить", exact: true }).click();
   await page.getByLabel("Стадия", { exact: true }).selectOption("walls");
   await page.getByLabel("Готовность, %", { exact: true }).fill("45");
-  await page.getByLabel("Шкала банка", { exact: true }).selectOption("50");
+  await page.getByLabel("Шкала готовности", { exact: true }).selectOption("50");
   await page
     .getByLabel("Причина исправления", { exact: true })
     .fill("Проверено сотрудником");

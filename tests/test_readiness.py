@@ -45,10 +45,9 @@ def run(detections, images=FULL_FLIGHT, target=True):
 
 
 def test_configs_are_consistent():
-    assert len(classes_config().classes) == 13
-    assert classes_config().classes[12].id == "fence"
-    assert classes_config().classes[11].id == "paving"
-    assert classes_config().classes[11].ml_id == 11
+    assert len(classes_config().classes) == 11
+    assert classes_config().classes[10].id == "building"
+    assert classes_config().classes[10].ml_id == 10
     assert [item.id for item in stages_config().stages][0] == "none"
 
 
@@ -64,7 +63,7 @@ def test_walls_and_rafters_match_documented_example():
     )
     assert result.stage == "roof"
     assert result.readiness_pct == 55
-    assert result.bank_readiness == 50
+    assert result.readiness_level == 50
     assert result.elements["foundation"].implied and result.elements["foundation"].present
     assert result.elements["walls_full"].views == ["E", "N", "S"]
     assert not result.elements["roof_covered"].present
@@ -73,7 +72,7 @@ def test_walls_and_rafters_match_documented_example():
     assert "стропила установлены, кровельного покрытия нет" in result.explanation
 
 
-def test_finished_house_reaches_bank_100():
+def test_finished_house_reaches_level_100():
     detections = [found("top_low", "roof_covered", 0.95), found("N", "door_installed", 0.9)]
     for view in ("N", "E", "S", "W"):
         detections += [
@@ -84,17 +83,17 @@ def test_finished_house_reaches_bank_100():
     result = run(detections)
     assert result.stage == "done"
     assert result.readiness_pct == 100
-    assert result.bank_readiness == 100
+    assert result.readiness_level == 100
     assert result.windows_ratio == 1
     assert result.elements["walls_full"].implied
 
 
-def test_bank_100_does_not_require_facade_finish():
+def test_level_100_does_not_require_facade_finish():
     detections = [found("top_low", "roof_covered", 0.95), found("S", "door_installed", 0.9)]
     detections += [found(view, "window_installed", 0.9) for view in ("N", "E", "S", "W")]
     result = run(detections)
     assert result.stage == "openings"
-    assert result.bank_readiness == 100
+    assert result.readiness_level == 100
     assert result.readiness_pct == 80
 
 
@@ -103,7 +102,7 @@ def test_empty_openings_lower_windows_ratio():
     detections += [found("E", "opening_empty", 0.9), found("S", "opening_empty", 0.9)]
     result = run(detections)
     assert result.windows_ratio == pytest.approx(1 / 3, abs=1e-4)
-    assert result.bank_readiness == 50
+    assert result.readiness_level == 50
     assert result.readiness_pct == 15 + 30 + 20 + 3
 
 
@@ -112,7 +111,7 @@ def test_view_mask_ignores_elements_from_wrong_views():
     result = run(detections)
     assert result.stage == "none"
     assert result.readiness_pct == 0
-    assert result.bank_readiness == 0
+    assert result.readiness_level == 0
     marked = annotate(detections, FULL_FLIGHT)
     assert marked["img_top_high_0"][0]["counted"] is False
     assert marked["img_top_high_0"][0]["class"] == "walls_full"
@@ -172,12 +171,12 @@ def test_review_contract():
         ReadinessReview(action="correct", stage="walls", readiness_pct=40)
     with pytest.raises(ValidationError):
         ReadinessReview(
-            action="correct", stage="none", readiness_pct=0, bank_readiness=50, comment="x"
+            action="correct", stage="none", readiness_pct=0, readiness_level=50, comment="x"
         )
     with pytest.raises(ValidationError):
         ReadinessReview(action="accept", stage="walls")
     review = ReadinessReview(action="correct", stage="done", readiness_pct=100, comment="x")
-    assert review.bank_readiness == 100
+    assert review.readiness_level == 100
 
 
 def textured(seed=0, size=(400, 300)):
@@ -282,7 +281,7 @@ def test_detector_result_review_and_images(client, settings):
     assert correction.status_code == 201, correction.text
     body = correction.json()
     assert body["id"].startswith("rev_") and body["flight_id"] == flight_id
-    assert body["author"] == "ivanov" and body["bank_readiness"] == 50
+    assert body["author"] == "ivanov" and body["readiness_level"] == 50
     flight = client.get(f"/api/v1/flights/{flight_id}").json()
     assert flight["result"] == original
     assert flight["readiness_review"]["stage"] == "walls"
@@ -295,7 +294,7 @@ def test_detector_result_review_and_images(client, settings):
 def test_meta_lists_stage_dictionaries(client):
     meta = client.get("/api/v1/meta").json()
     assert [item["id"] for item in meta["stages"]][-1] == "done"
-    assert [item["id"] for item in meta["bank_readiness"]] == [0, 50, 100]
+    assert [item["id"] for item in meta["readiness_levels"]] == [0, 50, 100]
     assert meta["classes"][3] == {
         "id": "walls_full",
         "ml_id": 3,

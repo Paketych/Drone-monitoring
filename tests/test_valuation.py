@@ -25,7 +25,7 @@ def house(percent=40):
                 "status": "determined",
                 "is_demo": False,
                 "readiness_pct": percent,
-                "bank_readiness": 100,
+                "readiness_level": 100,
             },
         },
     }
@@ -41,7 +41,7 @@ def test_demo_cost_example_and_ranges():
     assert result["completed_range_rub"] == [1_400_000, 2_600_000]
     assert result["remaining_range_rub"] == [2_100_000, 3_900_000]
     assert "100 м²" in result["explanation"]
-    assert result["breakdown"]["readiness_pct"] == 40  # Not bank scale 100.
+    assert result["breakdown"]["readiness_pct"] == 40  # Not readiness level 100.
 
 
 @pytest.mark.parametrize("percent,completed,remaining", [(0, 0, 5_000_000), (100, 5_000_000, 0)])
@@ -78,7 +78,7 @@ def test_human_review_overrides_unavailable_model():
     obj["last_flight"].update(
         target_confirmed=False,
         result={"status": "model_unavailable", "is_demo": True},
-        readiness_review={"readiness_pct": 45, "bank_readiness": 50},
+        readiness_review={"readiness_pct": 45, "readiness_level": 50},
     )
     result = calculate_valuation(obj)
     assert result["completed_cost_rub"] == 2_250_000
@@ -191,7 +191,7 @@ def setup(tmp_path):
                 "action": "correct",
                 "stage": "walls",
                 "readiness_pct": 40,
-                "bank_readiness": 50,
+                "readiness_level": 50,
                 "comment": "Checked photos",
             },
         )

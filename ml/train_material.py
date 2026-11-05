@@ -5,17 +5,17 @@
     python ml/train_material.py --epochs 1 --name material_smoke
 
 Кропы берутся из той же разметки, что и детектор: рамки walls_partial / walls_full с материалом
-(configs/materials.yaml), с полем 10% вокруг стены. Train и val делятся по объектам, как в детекторе;
-по умолчанию val подбирается сам так, чтобы в нём было около 20% кропов каждого материала.
+(configs/materials.yaml), с полем 10% вокруг стены. Val — те же объекты, что у детектора
+(ml/annotations/val_objects.txt). Стены с материалом unclear в обучение не идут: это не материал,
+а сомнение разметчика, в сервисе unclear получается из низкой уверенности (min_crop_confidence).
 Кропы — data/material/{train,val}/<материал>/, лучшие веса — weights/material_<модель>.pt,
-метрики val (точность по классам и по группам материалов) — runs/<name>/metrics_val.json.
+метрики val — runs/<name>/metrics_val.json: точность по классам, средняя по классам и по группам.
 """
 
 from __future__ import annotations
 
 import argparse
 import json
-import random
 import shutil
 from collections import Counter, defaultdict
 from pathlib import Path
@@ -28,6 +28,7 @@ from common import (
     STATUS_REVIEWED,
     load_classes,
     load_materials,
+    load_val_objects,
     read_labels,
     read_manifest,
 )
@@ -42,7 +43,7 @@ OUT_DIR = REPO / "data" / "material"
 _CROP_RULES = yaml.safe_load(MATERIALS_YAML.read_text(encoding="utf-8"))
 CROP_MARGIN = float(_CROP_RULES["crop_margin"])
 MIN_CROP_PX = int(_CROP_RULES["min_crop_px"])
-VAL_SHARE = 0.20
+NOT_TRAINED = {"unclear"}
 
 
 def collect_crops() -> list[dict]:
@@ -54,7 +55,7 @@ def collect_crops() -> list[dict]:
         if row["status"] != STATUS_REVIEWED or not (REPO / row["image"]).exists():
             continue
         for i, b in enumerate(read_labels(row["image"])):
-            if names[b.cls] in wall_classes and b.material:
+            if names[b.cls] in wall_classes and b.material and b.material not in NOT_TRAINED:
                 crops.append(
                     {
                         "image": row["image"],
@@ -65,32 +66,6 @@ def collect_crops() -> list[dict]:
                     }
                 )
     return crops
-
-
-def pick_val_objects(crops: list[dict], seed: int) -> set[str]:
-    """Объекты для val: у каждого материала, встречающегося хотя бы на двух объектах, около 20% кропов."""
-    per_object: dict[str, Counter] = defaultdict(Counter)
-    for c in crops:
-        per_object[c["object"]][c["material"]] += 1
-    totals = Counter(c["material"] for c in crops)
-    objects = sorted(per_object, key=_object_key)
-    random.Random(seed).shuffle(objects)
-    val: set[str] = set()
-    for material in sorted(totals, key=totals.get):  # редкие материалы первыми
-        holders = [o for o in objects if per_object[o][material]]
-        if len(holders) < 2:
-            continue
-        target = max(1, round(totals[material] * VAL_SHARE))
-        for o in sorted(
-            holders, key=lambda o: sum(per_object[o].values())
-        ):  # мелкие объекты первыми
-            have = sum(per_object[v][material] for v in val)
-            if (
-                have >= target or len(set(holders) - val) <= 1
-            ):  # хотя бы один объект с материалом остаётся в train
-                break
-            val.add(o)
-    return val
 
 
 def build(
@@ -152,6 +127,8 @@ def evaluate(weights: Path, root: Path, imgsz: int, device: str) -> dict:
                     group_hit += group.get(pred) == group[d.name]
     return {
         "top1": round(sum(hit.values()) / max(1, sum(total.values())), 4),
+        # top1 держится на самом частом классе hidden; средняя по классам этого не прячет.
+        "macro_accuracy": round(sum(hit[m] / total[m] for m in total) / max(1, len(total)), 4),
         "group_accuracy": round(group_hit / max(1, group_total), 4),
         "per_class": {m: {"n": total[m], "acc": round(hit[m] / total[m], 4)} for m in total},
         "confusion": {m: dict(c) for m, c in confusion.items()},
@@ -171,23 +148,23 @@ def main() -> None:
     p.add_argument("--workers", type=int, default=4)
     p.add_argument(
         "--val-objects",
-        default="",
-        help="объекты для val через запятую; по умолчанию подбираются сами",
+        default=load_val_objects(),
+        help="объекты для val через запятую; по умолчанию ml/annotations/val_objects.txt",
     )
     p.add_argument("--name", default="material")
     p.add_argument("--seed", type=int, default=0)
     p.add_argument(
         "--oversample",
-        default="brick=3",
+        default="brick=3,timber=3,frame=5,ceramic_block=8",
         help="во сколько раз повторить вырезки материала в train, через запятую; '' — без повторов. "
-        "Кирпича втрое меньше, чем «скрыт отделкой», без повторов он весь уходил в hidden",
+        "Редких материалов в 5–20 раз меньше, чем «скрыт отделкой»: без повторов они уходят в hidden",
     )
     args = p.parse_args()
     oversample = {
         m: int(k) for m, _, k in (x.partition("=") for x in args.oversample.split(",") if x)
     }
 
-    val_objects = parse_objects(args.val_objects) or pick_val_objects(collect_crops(), args.seed)
+    val_objects = parse_objects(args.val_objects)
     root, train_stats, val_stats = build(val_objects, oversample=oversample)
     print(f"val-объекты: {', '.join(sorted(val_objects, key=_object_key))}")
     print(f"{'материал':<18}{'train':>7}{'val':>7}")
@@ -235,7 +212,10 @@ def main() -> None:
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print(f"\nвеса: {final}")
-    print(f"точность top1 {report['top1']}  по группам {report['group_accuracy']}")
+    print(
+        f"точность top1 {report['top1']}  средняя по классам {report['macro_accuracy']}"
+        f"  по группам {report['group_accuracy']}"
+    )
     for m, v in report["per_class"].items():
         print(f"  {m:<18}{v['acc']:.3f}  (n={v['n']})")
 

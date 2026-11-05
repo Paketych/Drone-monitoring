@@ -13,7 +13,7 @@ import {
 } from "../js/inspection.js";
 import { analysisPanel } from "../js/analysis.js";
 
-test("Inspection connects without bank dictionaries", () => {
+test("Inspection connects without risk dictionaries", () => {
   const meta = normalizeMeta({
     scope: "inspection",
     materials: [],
@@ -148,7 +148,7 @@ test("Manual readiness takes precedence over unavailable model", () => {
         readiness_review: {
           stage: "walls",
           readiness_pct: 45,
-          bank_readiness: 50,
+          readiness_level: 50,
           author: "inspector",
           comment: "Проверено",
         },

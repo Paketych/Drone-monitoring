@@ -112,7 +112,7 @@ def test_manual_readiness_without_model_updates_card_history_and_filters(client,
             "action": "correct",
             "stage": "walls",
             "readiness_pct": 45,
-            "bank_readiness": 50,
+            "readiness_level": 50,
             "comment": "Checked manually",
         },
     )
@@ -147,17 +147,17 @@ def test_yolo_maps_names_from_weights_instead_of_enum_order(tmp_path, monkeypatc
             return self.values
 
     boxes = SimpleNamespace(
-        cls=Tensor([0, 11]), conf=Tensor([0.9, 0.8]), xyxyn=Tensor([[0.1, 0.1, 0.9, 0.9]] * 2)
+        cls=Tensor([0, 10]), conf=Tensor([0.9, 0.8]), xyxyn=Tensor([[0.1, 0.1, 0.9, 0.9]] * 2)
     )
     model = SimpleNamespace(
-        names={0: "paving", 11: "walls_full"},
+        names={0: "building", 10: "walls_full"},
         predict=lambda **kwargs: calls.append(kwargs) or [SimpleNamespace(boxes=boxes)],
     )
     monkeypatch.setitem(sys.modules, "ultralytics", SimpleNamespace(YOLO=lambda _: model))
     weights = tmp_path / "test.pt"
     weights.write_bytes(b"test")
     result = YoloDetector(weights).detect(Image.new("RGB", (10, 10)), "img_test")
-    assert [row.cls for row in result] == ["paving", "walls_full"]
+    assert [row.cls for row in result] == ["building", "walls_full"]
     assert calls[0]["imgsz"] == 1280
 
 

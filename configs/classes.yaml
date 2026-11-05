@@ -5,7 +5,7 @@
 # Маска применяется при агрегации, а не при разметке: на снимках размечено всё видимое
 # (кровля на надирах, building на top_low), иначе детектор учится на противоречивых примерах.
 
-version: classes@ml-v2
+version: classes@ml-v3
 views:
   - {id: top_low, label: "Сверху: дом"}
   - {id: top_high, label: "Сверху: участок"}
@@ -60,7 +60,3 @@ classes:
   - {id: 8,  name: door_installed,   label_ru: "Входная дверь",      color: "#D500F9", views: [facade]}
   - {id: 9,  name: facade_finish,    label_ru: "Отделка фасада",     color: "#B0BEC5", views: [facade]}
   - {id: 10, name: building,         label_ru: "Дом сверху",         color: "#7C4DFF", views: [top_high]}
-  - {id: 11, name: paving,           label_ru: "Дорожки и площадки", color: "#757575", views: [top_high]}
-  # Забор — признак начала освоения участка: на пустом участке с забором стройка уже началась.
-  # Размечается на всех ракурсах, включая временные ограждения стройки; длинный забор — отрезками.
-  - {id: 12, name: fence,            label_ru: "Забор",              color: "#FF8A80", views: [facade, top_low, top_high]}

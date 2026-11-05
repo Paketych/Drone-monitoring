@@ -18,6 +18,8 @@ MATERIALS_YAML = REPO / "configs" / "materials.yaml"
 ANNOTATIONS = REPO / "ml" / "annotations"
 LABELS_DIR = ANNOTATIONS / "labels"
 MANIFEST = ANNOTATIONS / "manifest.csv"
+# Контрольные объекты, общие для детектора и классификатора (ml/pick_val_objects.py).
+VAL_OBJECTS = ANNOTATIONS / "val_objects.txt"
 
 # Облёт по схеме (раздел 3.1) и ракурсы внешних фото (ml/add_images.py).
 VIEWS = ["N", "E", "S", "W", "top_low", "top_high", "oblique", "nadir", "ground"]
@@ -52,6 +54,11 @@ def load_materials() -> tuple[list[str], list[str]]:
     return [m["name"] for m in sorted(cfg["materials"], key=lambda m: m["id"])], cfg["wall_classes"]
 
 
+def load_val_objects() -> str:
+    """Контрольные объекты через запятую: формат аргумента --val-objects."""
+    return ",".join(VAL_OBJECTS.read_text(encoding="utf-8").split())
+
+
 def read_manifest() -> list[dict]:
     with MANIFEST.open(encoding="utf-8", newline="") as f:
         return list(csv.DictReader(f))
@@ -72,17 +79,23 @@ def label_path(image: str) -> Path:
 
 
 def read_labels(image: str) -> list[Box]:
-    """Рамки YOLO в долях кадра, с материалом стены, если он размечен."""
+    """Рамки YOLO в долях кадра, с материалом стены, если он размечен.
+
+    Рамки классов, которых больше нет в classes.yaml (забор и мощение, id 11 и 12), остаются
+    в файлах разметки, но не читаются. При импорте снимка из Label Studio они перезаписываются.
+    """
     path = label_path(image)
     if not path.exists():
         return []
+    known = len(load_classes())
     boxes = []
     for line in path.read_text(encoding="utf-8").splitlines():
         if line.strip():
             c, cx, cy, w, h, *rest = line.split()
-            boxes.append(
-                Box(int(c), float(cx), float(cy), float(w), float(h), rest[0] if rest else "")
-            )
+            if int(c) < known:
+                boxes.append(
+                    Box(int(c), float(cx), float(cy), float(w), float(h), rest[0] if rest else "")
+                )
     return boxes
 
 

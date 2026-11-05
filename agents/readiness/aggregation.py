@@ -11,7 +11,7 @@ from schemas.readiness import (
     Element,
     ReadinessResult,
     Stage,
-    default_bank_readiness,
+    default_readiness_level,
 )
 from schemas.readiness import DetectorClass as C
 
@@ -99,7 +99,7 @@ def aggregate(
     target_confirmed: bool,
     parcel: dict | None = None,
 ) -> ReadinessResult:
-    """Turn detections from all views into a stage, readiness % and the bank scale."""
+    """Turn detections from all views into a stage, readiness % and the readiness level."""
     rules = stages_config()
     result = ReadinessResult(
         model=model,
@@ -212,7 +212,7 @@ def aggregate(
     result.stage = stage
     result.stage_label = rules.stage_label(stage)
     result.readiness_pct = round(pct)
-    result.bank_readiness = 100 if complete_openings else default_bank_readiness(stage)
+    result.readiness_level = 100 if complete_openings else default_readiness_level(stage)
 
     # Confidence: the current stage is visible and nothing from later stages is.
     order = list(Stage)

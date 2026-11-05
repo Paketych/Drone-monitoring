@@ -136,7 +136,7 @@ class Database:
             "data_status": processing_status(last_flight),
             "stage": effective.get("stage"),
             "readiness_pct": effective.get("readiness_pct"),
-            "bank_readiness": effective.get("bank_readiness"),
+            "readiness_level": effective.get("readiness_level"),
             "valuation_inputs": json.loads(row["valuation_inputs"])
             if row["valuation_inputs"]
             else {},
@@ -489,7 +489,7 @@ class Database:
                         "flown_at": flight["flown_at"] or flight["uploaded_at"],
                         "stage": value["stage"],
                         "readiness_pct": value["readiness_pct"],
-                        "bank_readiness": value["bank_readiness"],
+                        "readiness_level": value.get("readiness_level"),
                         "reviewed": flight["readiness_review"] is not None,
                     }
                 )

@@ -8,7 +8,7 @@ const FACT_LABELS = {
   "plan.basis": "Основа графика",
   "plan.lag_suspected": "Признак отставания",
   "term.expired": "Плановый срок истёк",
-  "readiness.bank_readiness": "Шкала банка",
+  "readiness.level": "Шкала готовности",
   "budget.status": "Доступность расчёта стоимости",
   "budget.completion_scope": "Комплект работ в расчёте",
   "budget.method": "Метод расчёта",

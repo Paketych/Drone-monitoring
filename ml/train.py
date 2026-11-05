@@ -1,6 +1,6 @@
 """Обучение детектора агента готовности (docs/archive/BACKEND_PLAN.md, разделы 3.2 и 3.7).
 
-    python ml/train.py                                # YOLO26m, imgsz 1280, 150 эпох, val = объекты 6 и 13
+    python ml/train.py                                # YOLO26m, imgsz 1280, 150 эпох, val из val_objects.txt
     python ml/train.py --model yolo11m.pt             # запасной вариант
     python ml/train.py --batch 8                      # на видеокарте от 12 ГБ
     python ml/train.py --epochs 1 --name smoke        # проверить, что всё запускается
@@ -18,8 +18,8 @@ import shutil
 from pathlib import Path
 
 import torch
-from common import REPO
-from prepare_dataset import DEFAULT_VAL_OBJECTS, _object_key, build, parse_objects
+from common import REPO, load_val_objects
+from prepare_dataset import _object_key, build, parse_objects
 from ultralytics import YOLO
 
 WEIGHTS_DIR = REPO / "weights"
@@ -44,6 +44,12 @@ def parse_args() -> argparse.Namespace:
         default=2,
         help="2 занимает ~5 ГБ при imgsz 1280 (YOLO26m); на 6 ГБ batch 4 вылезает в общую память и в 4 раза медленнее",
     )
+    p.add_argument(
+        "--nbs",
+        type=int,
+        default=64,
+        help="номинальный batch: веса обновляются раз в nbs/batch шагов; при batch 2 и nbs 64 это редко",
+    )
     p.add_argument("--device", default="0" if torch.cuda.is_available() else "cpu")
     p.add_argument("--workers", type=int, default=4)
     p.add_argument(
@@ -52,7 +58,7 @@ def parse_args() -> argparse.Namespace:
         choices=["ram", "disk", "none"],
         help="кэш декодированных снимков: исходники 5280x3956 читаются медленно",
     )
-    p.add_argument("--val-objects", default=DEFAULT_VAL_OBJECTS)
+    p.add_argument("--val-objects", default=load_val_objects())
     p.add_argument("--exclude-objects", default="")
     p.add_argument(
         "--include-prelabel", action="store_true", help="учиться и на непроверенных рамках модели"
@@ -87,6 +93,7 @@ def main() -> None:
         epochs=args.epochs,
         patience=args.patience,
         batch=args.batch,
+        nbs=args.nbs,
         device=args.device,
         workers=args.workers,
         cache=False if args.cache == "none" else args.cache,
@@ -123,14 +130,21 @@ def main() -> None:
         names[int(c)]: round(float(ap), 4)
         for c, ap in zip(metrics.box.ap_class_index, metrics.box.ap50)
     }
+    # mAP считается только по классам, которые есть в val: без числа рамок его не прочитать.
+    instances = {
+        names[int(c)]: int(metrics.nt_per_class[int(c)]) for c in metrics.box.ap_class_index
+    }
     report = {
         "model": args.model,
         "weights": str(final.relative_to(REPO)),
         "val_objects": sorted(parse_objects(args.val_objects), key=_object_key),
         "imgsz": args.imgsz,
+        "batch": args.batch,
+        "nbs": args.nbs,
         "mAP50": round(float(metrics.box.map50), 4),
         "mAP50-95": round(float(metrics.box.map), 4),
         "AP50_per_class": per_class,
+        "val_instances": instances,
     }
     (run_dir / "metrics_val.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8"
@@ -139,7 +153,7 @@ def main() -> None:
     print(f"\nвеса: {final}")
     print(f"mAP50 {report['mAP50']}  mAP50-95 {report['mAP50-95']}")
     for name, ap in per_class.items():
-        print(f"  {name:<18}{ap:.3f}")
+        print(f"  {name:<18}{ap:.3f}  (рамок: {instances[name]})")
 
     if args.export:
         print(YOLO(str(final)).export(format=args.export, imgsz=args.imgsz))

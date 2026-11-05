@@ -29,7 +29,7 @@ export function normalizeMeta(raw) {
     "signals",
     "classes",
     "stages",
-    "bank_readiness",
+    "readiness_levels",
     "material_statuses",
   ])
     result[key] = Array.isArray(raw[key]) ? raw[key] : [];

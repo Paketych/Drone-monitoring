@@ -49,7 +49,7 @@ test("all configured materials use their own rates and progress uses the interna
   const obj = {
     last_flight: { status: "done" },
     readiness_pct: 40,
-    bank_readiness: 100,
+    readiness_level: 100,
   };
   for (const [material, full] of Object.entries({
     brick: 6000000,

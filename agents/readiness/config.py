@@ -115,7 +115,7 @@ class StagesConfig(Contract):
     quality: QualityConfig
     weights: Weights
     stages: list[Label]
-    bank_readiness: list[Label]
+    readiness_levels: list[Label]
     reshoot_reasons: dict[str, str]
 
     @model_validator(mode="after")

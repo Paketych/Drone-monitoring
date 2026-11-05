@@ -1,4 +1,4 @@
-// Изолированный демонстрационный адаптер. Не является банковским движком риска.
+// Изолированный демонстрационный адаптер. Не является движком риска.
 import { calculateDemoValuation } from "./valuation-demo.js";
 
 export const DEMO_DATE = "2026-10-31";
@@ -31,7 +31,7 @@ export const meta = {
     ["orange", "Связаться с клиентом", { color: "#b64f08", order: 2 }],
     ["red", "Срочно", { color: "#c23738", order: 3 }],
   ]),
-  bank_readiness: pairs([
+  readiness_levels: pairs([
     [0, "Ничего нет"],
     [50, "Фундамент, стены, возможно каркас крыши"],
     [100, "Стены, крыша, окна и двери"],
@@ -265,7 +265,7 @@ function fixture(n) {
     stage: stages[n - 1],
     readiness_pct: pcts[n - 1],
     plan_pct: plans[n - 1],
-    bank_readiness: n === 3 ? 100 : n === 1 ? 0 : 50,
+    readiness_level: n === 3 ? 100 : n === 1 ? 0 : 50,
     lag_days: Math.max(0, Math.round((plans[n - 1] - pcts[n - 1]) * 7.3)),
     risk_level: risks[n - 1],
     data_status: n === 9 ? "reshoot" : hasFlight ? "ok" : "no_data",
@@ -394,7 +394,7 @@ function settle(o) {
       strategy_code: c.strategy?.code || null,
       next_step_code: c.next_step?.code || null,
       reason: c.explanation,
-      evidence_refs: ["readiness.bank_readiness"],
+      evidence_refs: ["readiness.level"],
       missing_data: [],
     };
 }
@@ -409,7 +409,7 @@ function makeFlight(o, id) {
     result: {
       stage: o.stage,
       readiness_pct: o.readiness_pct,
-      bank_readiness: o.bank_readiness,
+      readiness_level: o.readiness_level,
       confidence: o.data_status === "reshoot" ? 0.41 : 0.89,
       explanation:
         description[Number(o.id.split("_").at(-1))] ||
@@ -474,7 +474,7 @@ function refreshRegistryDemo(o) {
   if (o.flights.length) return;
   o.plan_pct = Math.max(0, Math.min(100, 100 - o.term_left_pct));
   o.readiness_pct = null;
-  o.bank_readiness = null;
+  o.readiness_level = null;
   o.stage = null;
   o.risk.fact_pct = null;
   o.risk.plan_pct = o.plan_pct;
@@ -684,7 +684,7 @@ export async function mockRequest(path, { method = "GET", body, user } = {}) {
             flown_at: f.flown_at,
             stage: f.review?.stage || f.result.stage,
             readiness_pct: f.review?.readiness_pct ?? f.result.readiness_pct,
-            bank_readiness: f.result.bank_readiness,
+            readiness_level: f.result.readiness_level,
             reviewed: !!f.review,
             risk_level: o.risk_level,
           })),
