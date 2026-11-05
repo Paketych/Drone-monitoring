@@ -13,6 +13,7 @@ from api.presentation import (
     material_result_response,
     processing_status,
     readiness_data_status,
+    readiness_response,
 )
 from schemas.material import utc_now
 
@@ -236,7 +237,9 @@ class Database:
             "target_confirmed": bool(row["target_confirmed"]),
             "mock": bool(row["is_demo"]),
             "images_count": count,
-            "result": json.loads(row["readiness"]) if row["readiness"] else None,
+            "result": readiness_response(json.loads(row["readiness"]))
+            if row["readiness"]
+            else None,
             "land_result": None,
             "material_result": material_result_response(
                 json.loads(row["result"]) if row["result"] else None
@@ -254,7 +257,11 @@ class Database:
 
     @staticmethod
     def _readiness_review(row: sqlite3.Row, flight_id: str) -> dict:
-        return {"id": f"rev_{row['id']}", "flight_id": flight_id, **json.loads(row["payload"])}
+        return {
+            "id": f"rev_{row['id']}",
+            "flight_id": flight_id,
+            **readiness_response(json.loads(row["payload"])),
+        }
 
     def detections(self, flight_id: str) -> dict[str, list[dict]]:
         self.flight(flight_id)
@@ -461,7 +468,11 @@ class Database:
             ).fetchall()
         actions = [
             {
-                **json.loads(row["payload"]),
+                **(
+                    readiness_response(json.loads(row["payload"]))
+                    if row["kind"] == "readiness"
+                    else json.loads(row["payload"])
+                ),
                 "kind": row["kind"],
                 "label": "Проверка материала"
                 if row["kind"] == "material"

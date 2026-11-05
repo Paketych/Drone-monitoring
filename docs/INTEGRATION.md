@@ -38,3 +38,7 @@ python -m scripts.export_valuation_demo
 ```
 
 Контракты и детали: [API](API.md), [YOLO](YOLO_INTEGRATION.md), [стоимость](VALUATION.md), [AI-модель](LLM.md).
+
+## Совместимость данных готовности
+
+Результаты и ручные проверки SQLite читаются с обоими именами шкалы: `bank_readiness` и `readiness_level`. Текущий API и 13-классовый детектор сохраняются до согласованного обновления из `develop_ml`. Подробности — в [READINESS_UPGRADE.md](READINESS_UPGRADE.md).

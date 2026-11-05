@@ -514,11 +514,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         values = body.model_dump(mode="json", exclude={"action", "comment"})
         if body.action == "accept":
             result = flight["result"]
-            if result is None or result["is_demo"] or result["stage"] is None:
+            fields = ("stage", "readiness_pct", "bank_readiness")
+            if (
+                result is None
+                or result.get("is_demo") is not False
+                or any(result.get(key) is None for key in fields)
+            ):
                 raise ServiceError(
                     409, "STAGE_NOT_DETERMINED", "Нет результата модели, который можно принять"
                 )
-            values = {key: result[key] for key in ("stage", "readiness_pct", "bank_readiness")}
+            values = {key: result[key] for key in fields}
         value = database.add_readiness_review(
             flight_id,
             {

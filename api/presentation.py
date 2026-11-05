@@ -21,6 +21,15 @@ MATERIAL_REVIEW_REASONS = {
 }
 
 
+def readiness_response(value: dict | None) -> dict | None:
+    """Read either stored level name without changing the original SQLite payload."""
+    if value is None or not {"bank_readiness", "readiness_level"}.intersection(value):
+        return value
+    # Explicit null in the new field remains unknown, even if the old field has a value.
+    level = value["readiness_level"] if "readiness_level" in value else value["bank_readiness"]
+    return {**value, "readiness_level": level, "bank_readiness": level}
+
+
 def material_result_response(result: dict | None) -> dict | None:
     """Add the shared API fields without changing stored ML observations."""
     if result is None:
